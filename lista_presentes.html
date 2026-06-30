@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 15 Anos — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto Lista 15 Anos, web app para gestão inteligente de presentes de eventos.">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">Lista de Presentes Interativa</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Web App · Eventos e Gestão Mobile-First</p>
+            <p class="hero__pitch">Lista de presentes inteligente, integrada a banco de dados em tempo real.
+                Separa itens exclusivos e sugestões livres, esconde valores e mantém um relatório privado em PDF
+                para os anfitriões.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Uso Pessoal</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Web App Responsivo</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Firebase / JS</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Concluído</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Organização sem constrangimentos</h2>
+            <p class="sheet__text">
+                Em grandes eventos comemorativos, como festas de 15 anos, a gestão da lista de presentes pode se
+                tornar caótica. Convidados costumam dar presentes repetidos, e o uso de planilhas públicas expõe
+                valores e nomes, gerando desconforto.
+            </p>
+            <p class="sheet__text">
+                A necessidade era criar uma plataforma onde os convidados pudessem escolher os presentes de
+                forma intuitiva pelo celular, com uma regra de negócios que tratasse a concorrência
+                (duas pessoas escolhendo o mesmo presente ao mesmo tempo) e garantisse a discrição financeira.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A EXPERIÊNCIA DO CONVIDADO</p>
+            <h2>Interface Mobile-First & Jornada do Usuário</h2>
+            <p class="sheet__text">
+                Como a maioria dos convidados acessa o link através de aplicativos de mensagens, toda a interface
+                foi projetada para telas de celular. A experiência foi dividida de forma a guiar o usuário sem fricções,
+                informando previamente tamanhos e numerações para evitar compras erradas.
+            </p>
+
+            <div class="mobile-mockup mobile-hero mt-4">
+                <img src="img/lista_presentes/index01.jpg" alt="Página Inicial Web App - Parte 1">
+                <img src="img/lista_presentes/index02.jpg" alt="Página Inicial Web App - Parte 2">
+                <div class="mobile-content">
+                    <h4>Portal Principal</h4>
+                    <p>Porta de entrada para os convidados. Funciona como um menu interativo que apresenta as
+                        quatro grandes categorias de presentes, guiando o usuário de forma fácil e direta.</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 2rem;">Categorias Estruturadas</h3>
+
+            <div class="mobile-showcase">
+                <div class="mobile-mockup">
+                    <img src="img/lista_presentes/calcados01.jpg" alt="Tela de Calçados - Parte 1">
+                    <img src="img/lista_presentes/calcados02.jpg" alt="Tela de Calçados - Parte 2">
+                    <div class="mobile-content">
+                        <h4>Calçados & Tênis</h4>
+                        <p>Destaca a numeração da aniversariante (35) e utiliza um carrossel de imagens para mostrar
+                            inspirações visuais como coturnos, botas e tênis.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/lista_presentes/roupas01.jpg" alt="Tela de Roupas - Parte 1">
+                    <img src="img/lista_presentes/roupas02.jpg" alt="Tela de Roupas - Parte 2">
+                    <div class="mobile-content">
+                        <h4>Roupas & Estilos</h4>
+                        <p>Informa o tamanho exato (PP/P - 36). Combina itens específicos com links diretos para
+                            lojas e uma galeria de fotos com inspirações de looks e calças.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/lista_presentes/bolsas01.jpg" alt="Tela de Bolsas - Parte 1">
+                    <img src="img/lista_presentes/bolsas02.jpg" alt="Tela de Bolsas - Parte 2">
+                    <div class="mobile-content">
+                        <h4>Bolsas & Acessórios</h4>
+                        <p>Focada em itens práticos. Traz listas com links diretos para e-commerce e um mural
+                            de fotos inspiracionais de joias e colares delicados.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/lista_presentes/beleza01.png" alt="Tela de Beleza - Parte 1">
+                    <img src="img/lista_presentes/beleza02.jpg" alt="Tela de Beleza - Parte 2">
+                    <div class="mobile-content">
+                        <h4>Beleza & Autocuidado</h4>
+                        <p>Reúne produtos de maquiagem, cabelo e skincare. Possui links diretos, galerias e um
+                            cartão de destaque que redireciona para a lista exclusiva de O Boticário.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Sincronização e Regras de Negócio</h2>
+            <p class="sheet__text">
+                A inteligência principal do sistema roda em cima do banco de dados em tempo real. Os presentes são
+                categorizados entre itens exclusivos que, assim que reservados, são imediatamente bloqueados
+                para os demais convidados e cotas/sugestões livres. Para os anfitriões, criei um módulo
+                administrativo que compila todas as reservas em um PDF de fácil visualização.
+            </p>
+
+            <ul class="stacklist">
+                <li>Firebase Realtime Database</li>
+                <li>JavaScript Vanilla (ES6+)</li>
+                <li>Geração de PDF (Client-side)</li>
+                <li>Design System Customizado</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

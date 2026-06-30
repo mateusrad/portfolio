@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroSys — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto EletroSys, sistema de gestão web sob medida desenvolvido para a Eletro União LTDA.">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Exclusivo e Centralizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <!-- Logo transparente âmbar -->
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">EletroSys</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Sistema de Gestão Web para Oficina Elétrica</p>
+            <p class="hero__pitch">Plataforma sob medida que integra a captação online de clientes ao controle gerencial absoluto — unificando ordens de serviço, estoque, fluxo de caixa e relatórios numa única base de dados.</p>
+
+            <!-- Adicionado a classe titleblock--alt para garantir o grid de 4 colunas -->
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Cliente</span>
+                    <span class="titleblock__value">Eletro União LTDA</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Portal Web / ERP</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Django / PostgreSQL</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>O fim das planilhas dispersas</h2>
+            <p class="sheet__text">
+                A Eletro União LTDA, oficina especializada na manutenção de motores elétricos, gerenciava sua operação diária de forma manual. O fluxo de informações — desde a entrada do equipamento, orçamento, aprovação até a ordem de serviço e cobrança — dependia de anotações em papel e planilhas desconexas.
+            </p>
+            <p class="sheet__text">
+                O desafio era modernizar a presença online da empresa e, simultaneamente, construir um sistema de gestão robusto (backend) que abraçasse toda a lógica do negócio, sem burocratizar o trabalho dos técnicos ou o atendimento ao cliente.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Da Vitrine ao Dashboard Operacional</h2>
+            <p class="sheet__text">
+                O sistema atua em duas frentes: uma área pública otimizada para captar orçamentos e consolidar a
+                marca na web, e uma área restrita altamente detalhada para garantir precisão e velocidade na
+                gestão da oficina.
+            </p>
+
+            <!-- Destaque 1: Portal Institucional -->
+            <div class="desktop-feature mt-4">
+                <img src="img/eletrosys/index.png" alt="Tela Index do EletroSys">
+                <h4>Portal Institucional (Vitrine)</h4>
+                <p>A página inicial atua como a vitrine digital da Eletro União LTDA. Conta com uma apresentação
+                    visual dinâmica (slideshow) e informações institucionais, projetada para estabelecer
+                    credibilidade imediata junto aos clientes e empresas do setor.</p>
+            </div>
+
+            <!-- Grid 2x2: Páginas Públicas Auxiliares -->
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/eletrosys/serv_prestados.png" alt="Tela de Serviços Prestados">
+                    <!-- Texto atualizado por você mantido aqui -->
+                    <h4>Serviços Prestados</h4>
+                    <p>Apresenta o catálogo de serviços oferecidos pela Eletro União LTDA, permitindo que os clientes pesquisem por equipamentos ou tipos de serviços.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/eletrosys/localizacao.png" alt="Tela Nossa Localização">
+                    <h4>Localização e Acesso</h4>
+                    <p>Módulo de informação logística para guiar os clientes fisicamente até a oficina em Lages/SC, facilitando a entrega e retirada de motores elétricos pesados e equipamentos industriais.</p>
+                </div>
+            </div>
+
+            <!-- Destaque Final: Painel de Gestão -->
+            <div class="desktop-feature">
+                <img src="img/eletrosys/gestao.png" alt="Tela de Gestão Operacional e Relatórios">
+                <h4>Painel de Gestão Operacional (O Motor do ERP)</h4>
+                <p>A área restrita substitui completamente as anotações físicas. É utilizada pelos gestores para administrar clientes e fornecedores, monitorar o estoque de peças, formalizar vendas e ordens de serviço, e gerar inteligência financeira por meio de relatórios de fluxo de caixa.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Bastidores Técnicos</h2>
+            <p class="sheet__text">
+                A aplicação foi construída visando escalabilidade e segurança de acesso. O framework Django fornece a robustez necessária para as Views (regras de negócio) e o Admin (gerenciamento de conteúdo), enquanto o PostgreSQL assegura a integridade das transações financeiras e histórico de manutenções.
+            </p>
+
+            <ul class="stacklist">
+                <li>Python</li>
+                <li>Django Framework (Views & Admin)</li>
+                <li>PostgreSQL</li>
+                <li>Design UI/UX Responsivo</li>
+                <li>Autenticação / Níveis de Acesso</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <!-- Logo transparente claro -->
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <!-- Adicionado o fallback de ano -->
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<!-- Chamada do JS centralizado -->
+<script src="js/script.js"></script>
+</body>
+</html>

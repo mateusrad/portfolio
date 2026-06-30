@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeluz Finder — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto Projeluz Finder, motor de busca e indexação para acervos técnicos de engenharia.">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Exclusivo e Centralizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <!-- Logo transparente âmbar -->
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">Projeluz Finder</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Intranet e Motor de Busca Técnico</p>
+            <p class="hero__pitch">Sistema que automatiza a indexação e a pesquisa de acervos técnicos
+                de engenharia — varrendo pastas descentralizadas e entregando uma busca em milissegundos.</p>
+
+            <!-- Adicionado a classe titleblock--alt para garantir o grid de 4 colunas -->
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Ambiente</span>
+                    <span class="titleblock__value">Rede Local (Intranet)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Indexador / Busca</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Python</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>A agulha no palheiro de arquivos</h2>
+            <p class="sheet__text">
+                Escritórios de engenharia geram um volume massivo de dados diariamente: projetos em CAD,
+                relatórios em PDF, plantas e fichas de especificações. Com o passar dos anos, esses arquivos
+                acabam espalhados por diversas pastas e subpastas de rede.
+            </p>
+            <p class="sheet__text">
+                O desafio era eliminar o tempo morto que a equipe perdia navegando manualmente entre pastas
+                tentando encontrar projetos antigos para referência, sem precisar migrar todos os arquivos para
+                um sistema em nuvem complexo e caro.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                Desenvolvi um motor que varre ativamente as pastas de rede mapeadas e centraliza tudo em uma
+                interface web leve e intuitiva, projetada para uso ágil no desktop.
+            </p>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/projeluz/index_busca.png" alt="Tela Index / Buscador">
+                <h4>Index (Buscador)</h4>
+                <p>A "porta de entrada" do sistema. Exibe a listagem completa dos projetos com uma barra de busca
+                    inteligente e filtros avançados para localizar obras por cliente, título, endereço ou detalhes
+                    técnicos.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/projeluz/detalhes.png" alt="Tela de Detalhamento do Projeto">
+                <h4>Detalhamento (Ficha Técnica)</h4>
+                <p>Exibe todos os dados estruturados do cliente e a lista paginada de arquivos (PDFs, CADs, imagens)
+                    vinculados ao projeto. Permite a visualização rápida ou o download direto dos documentos mapeados
+                    na rede local.</p>
+            </div>
+
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/projeluz/edit_cliente.png" alt="Tela Editar Cliente">
+                    <h4>Atualização de Cliente</h4>
+                    <p>Formulário para atualizar as informações cadastrais (nome, CNPJ, telefone, e-mail).
+                        Ao salvar, o sistema localiza e atualiza automaticamente os arquivos de backup de
+                        todos os projetos vinculados a este cliente.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/projeluz/edit_projeto.png" alt="Tela Editar Projeto">
+                    <h4>Sincronização de Projeto</h4>
+                    <p>Página para atualizar os dados da obra (título, endereço, escopo). O sistema garante que
+                        as alterações feitas na web sejam espelhadas fisicamente nos arquivos de texto e JSON
+                        nativos nas pastas do Windows.</p>
+                </div>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/projeluz/report.png" alt="Modal de Report de Erro">
+                <h4>Report de Erro e Suporte</h4>
+                <p>Canal direto de suporte via e-mail integrado ao sistema. Permite que o usuário descreva
+                    problemas operacionais e anexe capturas de tela, fornecendo feedback visual de processamento
+                    em tempo real enquanto notifica o desenvolvedor.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Bastidores Técnicos</h2>
+            <p class="sheet__text">
+                A solução roda diretamente nos servidores locais do cliente. Utilizando scripts Python,
+                as rotinas fazem o parser de arquivos de forma otimizada (sem sobrecarregar a leitura do
+                disco rígido), além de realizar operações de I/O em arquivos de texto e JSON, mantendo a
+                integridade dos dados entre a interface web e o sistema operacional Windows.
+            </p>
+
+            <ul class="stacklist">
+                <li>Python</li>
+                <li>Automação de Tarefas</li>
+                <li>Manipulação de Sistema de Arquivos (I/O)</li>
+                <li>Web Interface (Intranet)</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <!-- Logo transparente claro -->
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <!-- Adicionado o fallback de ano -->
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<!-- Chamada do JS centralizado -->
+<script src="js/script.js"></script>
+</body>
+</html>
