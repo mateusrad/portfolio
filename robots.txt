@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mateusrad.github.io/portfolio/sitemap.xml

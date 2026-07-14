@@ -403,12 +403,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .project__link:hover { color: var(--bp-amber); gap: 0.65rem; }
 
-.project__link--repo {
-    color: var(--bp-line-dim);
-    font-size: 0.75rem;
-}
-.project__link--repo:hover { color: var(--bp-line); gap: 0.4rem; }
-
 /* ---------- Contato ---------- */
 
 .contact-row {

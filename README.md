@@ -10,11 +10,9 @@ css/style.css
 js/script.js
 ```
 
-## Antes de publicar
+## Adicionando um novo projeto
 
-1. Abra `index.html` e troque o e-mail de exemplo `seuemail@exemplo.com` pelo seu e-mail real (duas ocorrências, dentro de `<a href="mailto:...">`).
-2. Se quiser, adicione um link do LinkedIn na seção `#contato`, seguindo o mesmo padrão do bloco `.contact-link` já usado para e-mail e GitHub.
-3. Para adicionar um novo projeto, copie um bloco `<article class="project reveal">...</article>` inteiro dentro de `<section id="projetos">`, ajuste o número da folha (`project__num`), título, descrição, tags e o link do repositório.
+Para adicionar um novo projeto, copie um bloco `<article class="project reveal">...</article>` inteiro dentro de `<section id="projetos">` em `index.html`, ajuste o número da folha (`project__num`), título, descrição e tags, e crie a página de estudo de caso correspondente (copie `eletrosys.html` como modelo). Lembre de atualizar também as meta tags `og:title`, `og:description`, `og:image` e `og:url` no `<head>` da nova página.
 
 ## Publicar no GitHub Pages
 
