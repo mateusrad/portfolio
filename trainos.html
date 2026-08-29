@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainOS — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto TrainOS, app PWA de treino, corrida e composição corporal com login Google e dados em tempo real via Firebase.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/trainos.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="TrainOS — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto TrainOS, app PWA de treino, corrida e composição corporal com login Google e dados em tempo real via Firebase.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/trainos/lista-treinos.jpg">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/trainos.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">TrainOS</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">App PWA de Treino, Corrida e Composição Corporal</p>
+            <p class="hero__pitch">Substitui a agenda e o caderninho de treino por um app instalável no celular
+                que guarda carga série a série, cronometra o descanso, acompanha corrida por zona de frequência
+                cardíaca e o histórico de composição corporal — tudo isolado por atleta, em tempo real.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Uso Pessoal (multiatleta)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">PWA Instalável</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">React / Firebase</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Do caderninho ao app instalável</h2>
+            <p class="sheet__text">
+                Antes do TrainOS, o controle de treino, carga e frequência de execução vivia espalhado entre a
+                Google Agenda e anotações soltas — sem histórico de carga, sem cronômetro de descanso embutido,
+                sem visão clara de qual grupo muscular estava mais atrasado.
+            </p>
+            <p class="sheet__text">
+                O desafio era ir além de uma lista de exercícios: construir um app que qualquer atleta pudesse
+                instalar no celular como se fosse nativo, logar com a própria conta Google e enxergar só os
+                próprios dados — mesmo compartilhando o mesmo banco com outros atletas. Com o tempo, o escopo
+                cresceu para cobrir também corrida (zonas de treino calculadas a partir de exame de esforço) e
+                composição corporal (histórico de exames DEXA).
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                O app roda como PWA — instala na tela inicial do celular, abre em tela cheia, sem passar pela
+                App Store ou Play Store. Toda a estrutura é mobile-first, pensada para ser usada com a mão livre,
+                no meio do treino.
+            </p>
+
+            <div class="mobile-mockup mobile-hero mt-4">
+                <img src="img/trainos/lista-treinos.jpg" alt="Tela Painel de Treinos">
+                <div class="mobile-content">
+                    <h4>Painel de Treinos</h4>
+                    <p>Tela inicial: lista os treinos ordenados pelo que está há mais tempo sem check-in, para o
+                        atleta nunca perder de vista o grupo muscular mais atrasado. Cada card mostra duração
+                        média estimada e a data do último check-in.</p>
+                </div>
+            </div>
+
+            <div class="mobile-showcase">
+                <div class="mobile-mockup">
+                    <img src="img/trainos/upper-a-detalhe.jpg" alt="Tela de Execução do Treino Upper A">
+                    <div class="mobile-content">
+                        <h4>Execução do Treino</h4>
+                        <p>Cada série guarda repetições e carga, com checkbox de progresso conforme é concluída.
+                            Alterar a carga grava no Firestore automaticamente, sem precisar salvar manualmente.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/trainos/lower-a.jpg" alt="Tela de Estrutura do Treino Lower A">
+                    <div class="mobile-content">
+                        <h4>Estrutura Fixa por Dia</h4>
+                        <p>Os exercícios de cada dia são fixos — o atleta só ajusta carga, não a estrutura. Vídeo
+                            demonstrativo disponível por exercício, e "Iniciar treino" dispara o cronômetro de
+                            sessão, com finalização automática caso o atleta esqueça de encerrar.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/trainos/corrida.jpg" alt="Tela de Corrida e Zonas de Treino">
+                    <div class="mobile-content">
+                        <h4>Corrida & Zonas de Treino</h4>
+                        <p>A partir dos dados de um exame de esforço (FC máxima, limiares, VO2 máx), o app calcula
+                            as zonas de treino (Z1 a Z5) e organiza os planos de corrida intervalada e contínua,
+                            com registro de cada sessão.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/trainos/dexa.jpg" alt="Tela de Composição Corporal DEXA">
+                    <div class="mobile-content">
+                        <h4>Composição Corporal (DEXA)</h4>
+                        <p>Histórico de exames de composição corporal, com peso, percentual de gordura, massa
+                            magra/gorda e taxa andrógino-ginóide, para acompanhar a evolução entre exames.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 2rem;">Painel Multiatleta</h3>
+
+            <div class="mobile-mockup mobile-hero">
+                <img src="img/trainos/usuarios-admin.jpg" alt="Tela de Painel Administrativo de Usuários">
+                <div class="mobile-content">
+                    <h4>Administração de Atletas</h4>
+                    <p>Área restrita mostra todos os atletas cadastrados, com acessos e treinos realizados, e
+                        permite bloquear o acesso de alguém sem excluir a conta — reforçado tanto na interface
+                        quanto nas regras de segurança do banco.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Serverless por design</h2>
+            <p class="sheet__text">
+                O app não tem servidor próprio: é HTML/CSS/JS que fala diretamente com o Firebase (Authentication
+                + Firestore), publicado no Firebase Hosting como PWA. O isolamento entre atletas não depende do
+                código da interface — é garantido pelas regras de segurança do Firestore, que decidem linha a
+                linha quem pode ler ou escrever cada documento. Toda tela atualiza em tempo real por meio de
+                listeners do Firestore, sem botão de "atualizar".
+            </p>
+
+            <ul class="stacklist">
+                <li>React</li>
+                <li>Vite</li>
+                <li>Firebase Authentication</li>
+                <li>Firestore (tempo real)</li>
+                <li>Firebase Hosting</li>
+                <li>PWA Instalável</li>
+                <li>Tailwind CSS</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
