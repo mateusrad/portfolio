@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Interativo — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto Menu Interativo, cardápio digital e bar de drinks com pedidos em tempo real via Firebase, criado para uma festa de 15 anos.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/menu-interativo.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Menu Interativo — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto Menu Interativo, cardápio digital e bar de drinks com pedidos em tempo real via Firebase, criado para uma festa de 15 anos.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/menu-interativo/hub.jpg">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/menu-interativo.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">Menu Interativo</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Cardápio Digital e Bar de Drinks em Tempo Real</p>
+            <p class="hero__pitch">Sistema completo para uma festa de 15 anos: cardápio digital por QR code na
+                mesa, bar de drinks personalizados com fila de pedidos ao vivo, painel operacional para o
+                bartender e aviso automático no celular do convidado quando o drink fica pronto — tudo sem
+                servidor próprio.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Evento Único (Festa de 15 Anos)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Web App / Pedidos</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">JavaScript / Firebase</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Do balcão lotado ao pedido pelo celular</h2>
+            <p class="sheet__text">
+                Bares de festa com drinks personalizados esbarram num gargalo clássico: o convidado pede
+                verbalmente, o bartender tenta lembrar quem pediu o quê, e não existe como avisar quando aquele
+                drink específico ficou pronto sem o convidado ficar de pé, esperando no balcão.
+            </p>
+            <p class="sheet__text">
+                O desafio era construir, para uma festa de 15 anos, um fluxo self-service pelo celular — sem app
+                para instalar, sem fila física — que avisasse o próprio convidado quando seu pedido estivesse
+                pronto, desse ao bartender uma visão clara e ordenada do que preparar a seguir, e ainda
+                funcionasse como cardápio digital completo (buffet, doces, bebidas) acessível por QR code em cada
+                mesa. Tudo dentro do orçamento e do prazo de um evento de um dia só.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                O convidado acessa tudo pelo próprio celular, sem instalar nada: um QR code na mesa leva direto
+                ao cardápio, já identificando o número da mesa automaticamente. Nos bastidores, cada pedido de
+                drink sincroniza em tempo real entre o convidado, o bartender e o telão de chamada.
+            </p>
+
+            <div class="mobile-mockup mobile-hero mt-4">
+                <img src="img/menu-interativo/hub.jpg" alt="Tela do Portal Principal do Convidado">
+                <div class="mobile-content">
+                    <h4>Portal do Convidado</h4>
+                    <p>Hub central do evento: reúne o cardápio do buffet, da mesa de doces, das bebidas
+                        convencionais e o bar de drinks interativo, com um cronômetro que avisa se o bar está
+                        aberto, fechado ou prestes a abrir, calculado a partir do horário real do evento.</p>
+                </div>
+            </div>
+
+            <div class="mobile-showcase">
+                <div class="mobile-mockup">
+                    <img src="img/menu-interativo/cardapio-buffet.jpg" alt="Tela de Cardápio Digital do Buffet">
+                    <div class="mobile-content">
+                        <h4>Cardápio Digital</h4>
+                        <p>Cardápios de consulta para buffet, doces e bebidas, com horário de disponibilidade de
+                            cada etapa exibido dinamicamente — pensados para tirar dúvidas do convidado sem
+                            precisar chamar um garçom.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/menu-interativo/doces.jpg" alt="Tela de Cardápio da Mesa de Doces">
+                    <div class="mobile-content">
+                        <h4>Regras de Negócio Reais</h4>
+                        <p>Cada item carrega as particularidades combinadas com o cliente — como o bolo
+                            principal, que não é servido à mesa e é entregue como lembrancinha em embalagem
+                            individual.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/menu-interativo/cocktails.jpg" alt="Tela de Pedido de Drinks Personalizados">
+                    <div class="mobile-content">
+                        <h4>Pedido de Drink Personalizado</h4>
+                        <p>O convidado escolhe entre drinks com e sem álcool, digita o nome e envia o pedido, que
+                            aparece instantaneamente no painel do bartender já sinalizado por faixa etária.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/menu-interativo/fila.jpg" alt="Tela de Fila de Espera dos Drinks">
+                    <div class="mobile-content">
+                        <h4>Fila de Espera ao Vivo</h4>
+                        <p>Painel público estilo telão: mostra quem está com o drink em preparo e quem já pode
+                            retirar no balcão, atualizando sozinho — o convidado também recebe vibração e aviso
+                            sonoro no celular quando seu pedido específico fica pronto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/menu-interativo/bartender.png" alt="Painel Operacional do Bartender">
+                <h4>Painel Operacional do Bartender</h4>
+                <p>Interface em modo escuro para trabalhar sob luz baixa, organizada em três colunas (Para Fazer,
+                    Fazendo, No Balcão) — pensada para dois bartenders atuarem ao mesmo tempo sem risco de pegar
+                    o mesmo pedido, já que o card some da fila assim que alguém inicia o preparo. O projeto
+                    também inclui um relatório de consumo ao vivo (ranking de drinks, distribuição por horário),
+                    consultado pela organização durante e depois da festa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Tempo real sem servidor</h2>
+            <p class="sheet__text">
+                O site inteiro é HTML, CSS e JavaScript puro, sem framework e sem etapa de build — cada página já
+                é o arquivo publicado. Toda a sincronização ao vivo (fila, painel do bartender, aviso de pronto)
+                roda sobre o Firebase Realtime Database, escutando mudanças em tempo real e atualizando a tela
+                diretamente, sem recarregar a página. Publicado no GitHub Pages, o deploy é literalmente um
+                <code>git push</code> — sem servidor para manter.
+            </p>
+
+            <ul class="stacklist">
+                <li>HTML / CSS / JavaScript</li>
+                <li>Firebase Realtime Database</li>
+                <li>GitHub Pages</li>
+                <li>QR Code por Mesa</li>
+                <li>Tempo Real</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
