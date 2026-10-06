@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiscalPro — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto FiscalPro, aplicativo desktop offline para fiscalização de contratos hospitalares: vigências, cotas, conciliação mensal e alertas preditivos.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/fiscalpro.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="FiscalPro — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto FiscalPro, aplicativo desktop offline para fiscalização de contratos hospitalares: vigências, cotas, conciliação mensal e alertas preditivos.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/fiscalpro/painel.png">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/fiscalpro.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">FiscalPro</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Gestão e Fiscalização de Contratos Hospitalares</p>
+            <p class="hero__pitch">Aplicativo desktop que tira a fiscalização de contratos públicos de um hospital
+                das planilhas: controla vigências, cotas de consumo, conciliação mensal do que foi executado e
+                dispara alertas antes que um contrato vença ou uma cota se esgote — tudo offline, num único
+                executável.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Cliente</span>
+                    <span class="titleblock__value">Fiscalização de Contratos (Hospital Público)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">App Desktop Offline</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Python / Flask / SQLite</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Prazos e cotas que não podem escapar</h2>
+            <p class="sheet__text">
+                Fiscalizar contratos de prestação de serviço num hospital público significa acompanhar ao mesmo
+                tempo prazos de vigência, aditivos, cotas de exames contratados e a conferência mensal entre o
+                que a empresa diz ter executado e o que está registrado no sistema interno. Em planilhas, um
+                vencimento ou um estouro de cota passa despercebido até virar problema.
+            </p>
+            <p class="sheet__text">
+                O desafio era entregar uma ferramenta que rodasse na máquina do próprio fiscal, sem servidor,
+                sem depender de internet e sem instalar nada — dentro de uma rede hospitalar com antivírus
+                corporativo e restrições de TI —, mas que ainda assim se atualizasse sozinha a cada nova versão.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                O FiscalPro é distribuído como um único executável: duplo clique e a interface abre no navegador,
+                servida localmente pela própria máquina. Os dados ficam num banco SQLite local, e nada sai do
+                computador do fiscal. Nas imagens abaixo, nomes de fornecedores, números de contrato e e-mails
+                institucionais foram desfocados.
+            </p>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/fiscalpro/painel.png" alt="Tela do Painel de Alertas do FiscalPro">
+                <h4>Painel de Alertas</h4>
+                <p>Recalcula a cada abertura os alertas de vencimento de vigência, de percentual de cota consumida
+                    e de ritmo preditivo — que avisa quando, no ritmo atual de consumo, uma cota vai se esgotar antes
+                    do fim do contrato, mesmo que o percentual ainda pareça baixo. Cada alerta pode ser marcado como
+                    ciente por 3 dias e volta sozinho se a situação persistir.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/fiscalpro/contratos.png" alt="Tela de listagem de Contratos do FiscalPro">
+                <h4>Contratos</h4>
+                <p>Listagem com busca por número, fornecedor ou objeto e filtro por status, ordenada pelo vencimento
+                    mais próximo. Cada contrato concentra suas cotas, aditivos, prazos, documentos anexados e a
+                    conciliação mensal do que foi executado.</p>
+            </div>
+
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/fiscalpro/novo-contrato.png" alt="Formulário de cadastro de Novo Contrato">
+                    <h4>Cadastro Completo</h4>
+                    <p>Dados da licitação, vigência, índice de reajuste, limite de acréscimo/supressão, tipo de cota
+                        e contatos para envio de relatórios, num único formulário.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/fiscalpro/configuracoes.png" alt="Tela de Configurações de alertas e ocorrências">
+                    <h4>Regras Configuráveis</h4>
+                    <p>Limiares de alerta (dias antes do vencimento, percentuais de cota) e tipos de ocorrência da
+                        conciliação mensal editáveis direto na interface, sem mexer em código.</p>
+                </div>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/fiscalpro/backup.png" alt="Tela de Backup e Restauração">
+                <h4>Backup e Restauração</h4>
+                <p>Backup automático a cada 7 dias em <code>.zip</code> (banco + documentos anexados), com pasta de
+                    destino configurável — apontar para uma pasta sincronizada pelo Google Drive garante uma cópia
+                    fora da máquina sem integrar com nenhuma API de nuvem. Antes de restaurar, o app cria um backup
+                    de segurança do estado atual. Além das telas acima, o FiscalPro faz a conciliação mensal de cada
+                    item contratado (quantidade informada pela empresa × registrada no sistema interno × aprovada,
+                    com cálculo automático de glosa) e gera relatórios mensais em PDF por contrato.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Um executável, zero servidor</h2>
+            <p class="sheet__text">
+                Python, Flask e SQLite empacotados com PyInstaller num único <code>.exe</code> para Windows — o
+                usuário final não instala Python nem dependência nenhuma. A interface é Jinja2 com CSS puro e
+                fontes do sistema, funcionando 100% offline. A atualização automática consulta as releases de um
+                repositório público no GitHub (o código-fonte fica num repositório privado separado, sem nenhum
+                token embutido no executável), baixa a versão nova e troca o <code>.exe</code> sozinha, com uma
+                janela de espera para o antivírus corporativo terminar de verificar o arquivo.
+            </p>
+
+            <ul class="stacklist">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>SQLite</li>
+                <li>Jinja2</li>
+                <li>fpdf2 (PDF)</li>
+                <li>PyInstaller</li>
+                <li>Auto-atualização via GitHub Releases</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f7539add96ed4b80a56f3465349fbc16"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
