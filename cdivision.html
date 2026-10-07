@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDI Vision — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto CDI Vision, sistema de gestão do fluxo de exames de imagem hospitalares, do pedido médico ao agendamento na clínica parceira.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/cdivision.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="CDI Vision — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto CDI Vision, sistema de gestão do fluxo de exames de imagem hospitalares, do pedido médico ao agendamento na clínica parceira.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/cdivision/hub.png">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/cdivision.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">CDI Vision</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Gestão do Fluxo de Exames de Imagem Hospitalares</p>
+            <p class="hero__pitch">Sistema que coordena o caminho completo de um exame de imagem, do pedido médico
+                feito pela enfermagem até o agendamento na clínica parceira que executa o exame. Substitui telefonemas,
+                papel e planilhas por um fluxo rastreável, com autorização, cotas por contrato e um portal próprio para
+                as clínicas.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Cliente</span>
+                    <span class="titleblock__value">Centro de Diagnóstico (Hospital Público)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Sistema Interno + Portal Externo</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Django / PostgreSQL / Firebase</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Um exame, muitas mãos</h2>
+            <p class="sheet__text">
+                Num hospital, um exame de imagem passa por várias mãos: a enfermagem pede, o centro de diagnóstico
+                confere e autoriza, a gestão controla a cota contratada de cada clínica parceira, e a clínica externa
+                agenda e devolve a data. Sem um sistema, cada etapa dependia de telefone, papel e planilha, e era
+                difícil saber em que ponto estava cada pedido.
+            </p>
+            <p class="sheet__text">
+                O desafio era integrar todo esse fluxo lidando com dados de saúde: as clínicas parceiras precisavam de
+                acesso pela internet, mas o servidor com os dados dos pacientes não podia ficar exposto fora da rede
+                do hospital.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                O CDI Vision é dividido em módulos por perfil de acesso (enfermagem, centro de diagnóstico, transporte
+                e administração), e cada funcionário vê só o que precisa. Nas imagens abaixo, o nome da instituição,
+                os logins e todos os dados de pacientes (nomes, prontuários e telefones) foram desfocados.
+            </p>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/cdivision/hub.png" alt="Hub de módulos do CDI Vision">
+                <h4>Hub de Módulos</h4>
+                <p>Ponto de entrada após o login: cada funcionário vê os módulos do seu perfil, entre Agendamentos da
+                    Enfermagem, CDI, Logística e Transporte de pacientes e Administração. O controle de acesso é
+                    checado no servidor antes de cada tela, não só escondido na interface.</p>
+            </div>
+
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/cdivision/enfermagem.png" alt="Módulo de Agendamentos da Enfermagem">
+                    <h4>Enfermagem</h4>
+                    <p>Solicitar exames, acompanhar o andamento dos pedidos e consultar a agenda confirmada dos
+                        pacientes internados.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/cdivision/administracao.png" alt="Módulo de Administração">
+                    <h4>Administração</h4>
+                    <p>Setores e leitos, equipe e perfis de acesso, e um painel de diagnóstico com os erros recentes do
+                        sistema, alimentado automaticamente e pelo botão "Reportar Erro" presente em todas as telas.</p>
+                </div>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/cdivision/modulo-cdi.png" alt="Módulo do Centro de Diagnóstico por Imagem">
+                <h4>Módulo do Centro de Diagnóstico</h4>
+                <p>Organizado em fluxo externo (pedidos ambulatoriais e agendamentos recebidos das clínicas parceiras),
+                    fluxo interno (conferência e aprovação de exames feitos no próprio hospital) e gestão
+                    (reagendamentos, cancelamentos e painel de auditoria). Cada contrato com uma clínica tem cota e
+                    valor por exame, e cancelar um agendamento devolve o saldo à cota automaticamente.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/cdivision/nova-solicitacao.png" alt="Formulário de nova solicitação de exame a partir de PDF">
+                <h4>Pedido a Partir do PDF</h4>
+                <p>A enfermagem anexa o PDF do pedido médico e o sistema preenche sozinho os dados do paciente e o
+                    procedimento, extraídos com pdfplumber e expressões regulares. Não usa IA nem tem custo por
+                    chamada, porque o layout dos pedidos é previsível; o usuário só confere e corrige se for
+                    preciso.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/cdivision/fila-solicitacoes.png" alt="Fila de solicitações de exames, com dados de pacientes desfocados">
+                <h4>Fila de Solicitações</h4>
+                <p>Acompanhamento de cada pedido por status (pendente, autorizado, recusado, cancelado), busca por
+                    paciente ou prontuário e lixeira com exclusão automática depois de 30 dias.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/cdivision/portal-clinicas.png" alt="Portal das clínicas parceiras, com dados de pacientes desfocados">
+                <h4>Portal das Clínicas Parceiras</h4>
+                <p>Site separado em que cada clínica parceira vê apenas os exames encaminhados a ela e informa a data e
+                    a hora do agendamento, ou o motivo do cancelamento. A clínica só consegue alterar esses campos: os
+                    dados do paciente nunca podem ser editados do lado dela, e toda alteração fica registrada num
+                    histórico de auditoria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Dados de saúde dentro da rede do hospital</h2>
+            <p class="sheet__text">
+                O sistema principal é Django, servido pelo Waitress num computador dentro da própria rede do hospital,
+                com PostgreSQL em produção (e SQLite em desenvolvimento, trocado só por uma variável de ambiente). O
+                portal das clínicas é um app estático separado que nunca fala com o servidor interno: os dois trocam
+                informação por um Firebase Realtime Database usado como caixa de correio, com regras que isolam cada
+                clínica no seu próprio ramo de dados. O backup de configuração vai criptografado para o Google Drive,
+                enquanto o backup completo, que contém dados de pacientes, fica só numa pasta da rede interna. A cada
+                reinício, o servidor de produção se atualiza sozinho a partir do repositório, aplica as migrações do
+                banco e sobe.
+            </p>
+
+            <ul class="stacklist">
+                <li>Python</li>
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>Waitress</li>
+                <li>Firebase Realtime Database</li>
+                <li>Firebase Authentication</li>
+                <li>pdfplumber</li>
+                <li>Google Drive API (backup)</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f7539add96ed4b80a56f3465349fbc16"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
