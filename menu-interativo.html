@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +30,10 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -103,9 +105,9 @@
             </p>
 
             <div class="mobile-mockup mobile-hero mt-4">
-                <img src="img/menu-interativo/hub.jpg" alt="Tela do Portal Principal do Convidado">
+                <img src="img/menu-interativo/hub.webp" width="610" height="1094" alt="Tela do Portal Principal do Convidado">
                 <div class="mobile-content">
-                    <h4>Portal do Convidado</h4>
+                    <h3>Portal do Convidado</h3>
                     <p>Hub central do evento: reúne o cardápio do buffet, da mesa de doces, das bebidas
                         convencionais e o bar de drinks interativo, com um cronômetro que avisa se o bar está
                         aberto, fechado ou prestes a abrir, calculado a partir do horário real do evento.</p>
@@ -114,9 +116,9 @@
 
             <div class="mobile-showcase">
                 <div class="mobile-mockup">
-                    <img src="img/menu-interativo/cardapio-buffet.jpg" alt="Tela de Cardápio Digital do Buffet">
+                    <img src="img/menu-interativo/cardapio-buffet.webp" width="610" height="1046" alt="Tela de Cardápio Digital do Buffet">
                     <div class="mobile-content">
-                        <h4>Cardápio Digital</h4>
+                        <h3>Cardápio Digital</h3>
                         <p>Cardápios de consulta para buffet, doces e bebidas, com horário de disponibilidade de
                             cada etapa exibido dinamicamente — pensados para tirar dúvidas do convidado sem
                             precisar chamar um garçom.</p>
@@ -124,9 +126,9 @@
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/menu-interativo/doces.jpg" alt="Tela de Cardápio da Mesa de Doces">
+                    <img src="img/menu-interativo/doces.webp" width="610" height="1126" alt="Tela de Cardápio da Mesa de Doces">
                     <div class="mobile-content">
-                        <h4>Regras de Negócio Reais</h4>
+                        <h3>Regras de Negócio Reais</h3>
                         <p>Cada item carrega as particularidades combinadas com o cliente — como o bolo
                             principal, que não é servido à mesa e é entregue como lembrancinha em embalagem
                             individual.</p>
@@ -134,18 +136,18 @@
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/menu-interativo/cocktails.jpg" alt="Tela de Pedido de Drinks Personalizados">
+                    <img src="img/menu-interativo/cocktails.webp" width="305" height="1198" alt="Tela de Pedido de Drinks Personalizados">
                     <div class="mobile-content">
-                        <h4>Pedido de Drink Personalizado</h4>
+                        <h3>Pedido de Drink Personalizado</h3>
                         <p>O convidado escolhe entre drinks com e sem álcool, digita o nome e envia o pedido, que
                             aparece instantaneamente no painel do bartender já sinalizado por faixa etária.</p>
                     </div>
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/menu-interativo/fila.jpg" alt="Tela de Fila de Espera dos Drinks">
+                    <img src="img/menu-interativo/fila.webp" width="610" height="1104" alt="Tela de Fila de Espera dos Drinks">
                     <div class="mobile-content">
-                        <h4>Fila de Espera ao Vivo</h4>
+                        <h3>Fila de Espera ao Vivo</h3>
                         <p>Painel público estilo telão: mostra quem está com o drink em preparo e quem já pode
                             retirar no balcão, atualizando sozinho — o convidado também recebe vibração e aviso
                             sonoro no celular quando seu pedido específico fica pronto.</p>
@@ -154,8 +156,8 @@
             </div>
 
             <div class="desktop-feature mt-4">
-                <img src="img/menu-interativo/bartender.png" alt="Painel Operacional do Bartender">
-                <h4>Painel Operacional do Bartender</h4>
+                <img src="img/menu-interativo/bartender.webp" width="1200" height="670" alt="Painel Operacional do Bartender">
+                <h3>Painel Operacional do Bartender</h3>
                 <p>Interface em modo escuro para trabalhar sob luz baixa, organizada em três colunas (Para Fazer,
                     Fazendo, No Balcão) — pensada para dois bartenders atuarem ao mesmo tempo sem risco de pegar
                     o mesmo pedido, já que o card some da fila assim que alguém inicia o preparo. O projeto
@@ -191,7 +193,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>

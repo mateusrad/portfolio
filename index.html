@@ -20,7 +20,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,7 +33,7 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="#topo" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a>
@@ -48,7 +50,7 @@
         <div class="hero__inner">
             <p class="eyebrow">FOLHA Nº 01 — APRESENTAÇÃO</p>
 
-            <img src="img/mateus.jpg" alt="Foto de Mateus Simões da Rosa" class="hero__photo">
+            <img src="img/mateus.webp" width="300" height="325" alt="Foto de Mateus Simões da Rosa" class="hero__photo">
 
             <h1 class="hero__name">Mateus Simões<br>da Rosa</h1>
 
@@ -119,24 +121,29 @@
                     <div class="project__head">
                         <span class="project__num">01</span>
                         <div>
-                            <h3>EletroSys</h3>
-                            <p class="project__type">Sistema de gestão · Oficina elétrica</p>
+                            <h3>CDI Vision</h3>
+                            <p class="project__type">Sistema hospitalar · Fluxo de exames</p>
                         </div>
                         <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <circle cx="24" cy="24" r="9"/>
-                            <path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.5 11.5l4.2 4.2M32.3 32.3l4.2 4.2M11.5 36.5l4.2-4.2M32.3 15.7l4.2-4.2"/>
+                            <rect x="6" y="10" width="36" height="24" rx="2"/>
+                            <path d="M18 40h12M24 34v6"/>
+                            <path d="M11 22h7l3-6 4 12 3-6h9"/>
                         </svg>
                     </div>
                     <p class="project__desc">
-                        Plataforma sob medida para a Eletro União LTDA, oficina de manutenção de motores elétricos. Centraliza cadastro de clientes e fornecedores, controle de estoque, orçamentos, ordens de serviço e fluxo de caixa, substituindo anotações manuais e planilhas soltas por uma base única de gestão.
+                        Sistema de gestão do fluxo de exames de imagem de um hospital público: do pedido médico, com dados extraídos automaticamente do PDF, à autorização e ao agendamento na clínica parceira. Controla cotas por contrato, mantém auditoria de alterações e oferece um portal separado para as clínicas, sem expor o servidor interno à internet.
                     </p>
                     <div class="project__tags">
-                        <span>Django</span><span>PostgreSQL</span><span>Gestão</span>
+                        <span>Django</span><span>Firebase Auth (custom claims)</span><span>Integração entre sistemas</span>
                     </div>
                     <div class="project__links">
-                        <a class="project__link" href="eletrosys.html">
+                        <a class="project__link" href="cdivision.html">
                             Ver telas e detalhes <span aria-hidden="true">→</span>
                         </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
                     </div>
                 </article>
 
@@ -144,111 +151,35 @@
                     <div class="project__head">
                         <span class="project__num">02</span>
                         <div>
-                            <h3>Projeluz Finder</h3>
-                            <p class="project__type">Intranet · Busca técnica</p>
+                            <h3>EscalaFácil</h3>
+                            <p class="project__type">Web app PWA · Escala e banco de horas</p>
                         </div>
                         <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <rect x="6" y="12" width="22" height="16" rx="2"/>
-                            <path d="M6 16h22"/>
-                            <circle cx="32" cy="32" r="8"/>
-                            <path d="M38 38l5 5"/>
+                            <rect x="7" y="10" width="34" height="30" rx="2"/>
+                            <path d="M7 18h34M15 6v8M33 6v8"/>
+                            <path d="M14 26h6M28 26h6M14 33h6"/>
                         </svg>
                     </div>
                     <p class="project__desc">
-                        Sistema de intranet que automatiza a indexação e a pesquisa de acervos técnicos de engenharia, projetos em CAD, PDFs e fichas dispersas em pastas de rede. Varre o acervo descentralizado, extrai metadados e entrega um motor de busca rápido e centralizado para a rede local do escritório.
+                        App web que calcula sozinho horas feitas, horas necessárias e saldo do banco de horas por vínculo empregatício, a partir dos turnos lançados num calendário. Importa a escala oficial do setor em planilha, publica uma grade para toda a equipe e exporta os plantões para o Google Agenda.
                     </p>
                     <div class="project__tags">
-                        <span>Python</span><span>Indexação</span><span>Rede local</span>
+                        <span>Firestore</span><span>Modelagem de domínio</span><span>PWA</span>
                     </div>
                     <div class="project__links">
-                        <a class="project__link" href="projeluz-finder.html">
+                        <a class="project__link" href="escalafacil.html">
                             Ver telas e detalhes <span aria-hidden="true">→</span>
                         </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
                     </div>
                 </article>
 
                 <article class="project reveal">
                     <div class="project__head">
                         <span class="project__num">03</span>
-                        <div>
-                            <h3>Lista de Presentes Interativa</h3>
-                            <p class="project__type">Web app · Evento</p>
-                        </div>
-                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <rect x="9" y="18" width="30" height="22" rx="2"/>
-                            <path d="M9 26h30M24 18v22M16 18c0-4 3-7 8-7s8 3 8 7"/>
-                        </svg>
-                    </div>
-                    <p class="project__desc">
-                        Sistema de lista de presentes integrado a um banco de dados em tempo real. Automatiza a reserva de itens exclusivos para evitar duplicidade e gerencia sugestões livres. A interface protege a privacidade dos convidados, ocultando valores e identidades, enquanto os anfitriões acompanham tudo de forma privada através de relatórios dinâmicos em PDF.
-                    </p>
-                    <div class="project__tags">
-                        <span>Firebase</span><span>Tempo real</span><span>PDF</span>
-                    </div>
-                    <div class="project__links">
-                        <a class="project__link" href="lista_presentes.html">
-                            Ver telas e detalhes <span aria-hidden="true">→</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project reveal">
-                    <div class="project__head">
-                        <span class="project__num">04</span>
-                        <div>
-                            <h3>TrainOS</h3>
-                            <p class="project__type">Web app PWA · Treino e saúde</p>
-                        </div>
-                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <rect x="4" y="18" width="8" height="12" rx="2"/>
-                            <rect x="36" y="18" width="8" height="12" rx="2"/>
-                            <path d="M12 24h24"/>
-                            <path d="M16 20v8M32 20v8"/>
-                        </svg>
-                    </div>
-                    <p class="project__desc">
-                        App instalável (PWA) para acompanhar treino de academia, corrida e composição corporal. Login com conta Google isola os dados de cada atleta em tempo real via Firebase, com cronômetro de descanso, sessão de treino automática e zonas de frequência cardíaca calculadas a partir de exame de esforço.
-                    </p>
-                    <div class="project__tags">
-                        <span>React</span><span>Firebase</span><span>PWA</span>
-                    </div>
-                    <div class="project__links">
-                        <a class="project__link" href="trainos.html">
-                            Ver telas e detalhes <span aria-hidden="true">→</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project reveal">
-                    <div class="project__head">
-                        <span class="project__num">05</span>
-                        <div>
-                            <h3>Menu Interativo</h3>
-                            <p class="project__type">Web app · Cardápio e bar de eventos</p>
-                        </div>
-                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <path d="M8 10L24 26L40 10"/>
-                            <path d="M24 26v14"/>
-                            <path d="M14 40h20"/>
-                            <path d="M12 14h24"/>
-                        </svg>
-                    </div>
-                    <p class="project__desc">
-                        Cardápio digital e bar de drinks para uma festa de 15 anos: pedidos em tempo real, painel do bartender, fila de espera ao vivo e aviso automático no celular do convidado quando o drink fica pronto — via QR code em cada mesa, sem app para instalar.
-                    </p>
-                    <div class="project__tags">
-                        <span>Firebase</span><span>Tempo real</span><span>QR Code</span>
-                    </div>
-                    <div class="project__links">
-                        <a class="project__link" href="menu-interativo.html">
-                            Ver telas e detalhes <span aria-hidden="true">→</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project reveal">
-                    <div class="project__head">
-                        <span class="project__num">06</span>
                         <div>
                             <h3>FiscalPro</h3>
                             <p class="project__type">App desktop · Gestão de contratos</p>
@@ -264,12 +195,107 @@
                         Aplicativo desktop para fiscalização de contratos de um hospital público: vigências, cotas de consumo, conciliação mensal, relatórios em PDF e painel de alertas preditivos. Roda 100% offline num único executável, com backup automático e atualização automática via GitHub.
                     </p>
                     <div class="project__tags">
-                        <span>Python</span><span>Flask</span><span>SQLite</span>
+                        <span>Flask</span><span>SQLite</span><span>.exe com auto-atualização</span>
                     </div>
                     <div class="project__links">
                         <a class="project__link" href="fiscalpro.html">
                             Ver telas e detalhes <span aria-hidden="true">→</span>
                         </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project__head">
+                        <span class="project__num">04</span>
+                        <div>
+                            <h3>EletroSys</h3>
+                            <p class="project__type">Sistema de gestão · Oficina elétrica</p>
+                        </div>
+                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <circle cx="24" cy="24" r="9"/>
+                            <path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.5 11.5l4.2 4.2M32.3 32.3l4.2 4.2M11.5 36.5l4.2-4.2M32.3 15.7l4.2-4.2"/>
+                        </svg>
+                    </div>
+                    <p class="project__desc">
+                        Plataforma sob medida para a Eletro União LTDA, oficina de manutenção de motores elétricos. Centraliza cadastro de clientes e fornecedores, controle de estoque, orçamentos, ordens de serviço e fluxo de caixa, substituindo anotações manuais e planilhas soltas por uma base única de gestão.
+                    </p>
+                    <div class="project__tags">
+                        <span>Django</span><span>SQLite</span><span>31 testes automatizados</span>
+                    </div>
+                    <div class="project__links">
+                        <a class="project__link" href="eletrosys.html">
+                            Ver telas e detalhes <span aria-hidden="true">→</span>
+                        </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project__head">
+                        <span class="project__num">05</span>
+                        <div>
+                            <h3>Projeluz Finder</h3>
+                            <p class="project__type">Intranet · Busca técnica</p>
+                        </div>
+                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <rect x="6" y="12" width="22" height="16" rx="2"/>
+                            <path d="M6 16h22"/>
+                            <circle cx="32" cy="32" r="8"/>
+                            <path d="M38 38l5 5"/>
+                        </svg>
+                    </div>
+                    <p class="project__desc">
+                        Sistema de intranet que automatiza a indexação e a pesquisa de acervos técnicos de engenharia, projetos em CAD, PDFs e fichas dispersas em pastas de rede. Varre o acervo descentralizado, extrai metadados e entrega um motor de busca rápido e centralizado para a rede local do escritório, coberto por uma suíte de testes automatizados.
+                    </p>
+                    <div class="project__tags">
+                        <span>Django</span><span>SQLite</span><span>53 testes automatizados</span>
+                    </div>
+                    <div class="project__links">
+                        <a class="project__link" href="projeluz-finder.html">
+                            Ver telas e detalhes <span aria-hidden="true">→</span>
+                        </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project__head">
+                        <span class="project__num">06</span>
+                        <div>
+                            <h3>TrainOS</h3>
+                            <p class="project__type">Web app PWA · Treino e saúde</p>
+                        </div>
+                        <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <rect x="4" y="18" width="8" height="12" rx="2"/>
+                            <rect x="36" y="18" width="8" height="12" rx="2"/>
+                            <path d="M12 24h24"/>
+                            <path d="M16 20v8M32 20v8"/>
+                        </svg>
+                    </div>
+                    <p class="project__desc">
+                        App instalável (PWA) para acompanhar treino de academia, corrida e composição corporal. Login com conta Google isola os dados de cada atleta em tempo real via Firebase, com cronômetro de descanso, sessão de treino automática e zonas de frequência cardíaca calculadas a partir de exame de esforço.
+                    </p>
+                    <div class="project__tags">
+                        <span>React</span><span>Vite</span><span>Firestore em tempo real</span>
+                    </div>
+                    <div class="project__links">
+                        <a class="project__link" href="trainos.html">
+                            Ver telas e detalhes <span aria-hidden="true">→</span>
+                        </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
                     </div>
                 </article>
 
@@ -277,25 +303,28 @@
                     <div class="project__head">
                         <span class="project__num">07</span>
                         <div>
-                            <h3>EscalaFácil</h3>
-                            <p class="project__type">Web app PWA · Escala e banco de horas</p>
+                            <h3>Lista de Presentes Interativa</h3>
+                            <p class="project__type">Web app · Evento</p>
                         </div>
                         <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <rect x="7" y="10" width="34" height="30" rx="2"/>
-                            <path d="M7 18h34M15 6v8M33 6v8"/>
-                            <path d="M14 26h6M28 26h6M14 33h6"/>
+                            <rect x="9" y="18" width="30" height="22" rx="2"/>
+                            <path d="M9 26h30M24 18v22M16 18c0-4 3-7 8-7s8 3 8 7"/>
                         </svg>
                     </div>
                     <p class="project__desc">
-                        App web que calcula sozinho horas feitas, horas necessárias e saldo do banco de horas por vínculo empregatício, a partir dos turnos lançados num calendário. Importa a escala oficial do setor em planilha, publica uma grade para toda a equipe e exporta os plantões para o Google Agenda.
+                        Sistema de lista de presentes integrado a um banco de dados em tempo real. Automatiza a reserva de itens exclusivos para evitar duplicidade e gerencia sugestões livres. A interface protege a privacidade dos convidados, ocultando valores e identidades, enquanto os anfitriões acompanham tudo de forma privada através de relatórios dinâmicos em PDF.
                     </p>
                     <div class="project__tags">
-                        <span>JavaScript</span><span>Firebase</span><span>PWA</span>
+                        <span>Firebase RTDB</span><span>JavaScript puro</span><span>PDF no navegador</span>
                     </div>
                     <div class="project__links">
-                        <a class="project__link" href="escalafacil.html">
+                        <a class="project__link" href="lista_presentes.html">
                             Ver telas e detalhes <span aria-hidden="true">→</span>
                         </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
                     </div>
                 </article>
 
@@ -303,25 +332,30 @@
                     <div class="project__head">
                         <span class="project__num">08</span>
                         <div>
-                            <h3>CDI Vision</h3>
-                            <p class="project__type">Sistema hospitalar · Fluxo de exames</p>
+                            <h3>Menu Interativo</h3>
+                            <p class="project__type">Web app · Cardápio e bar de eventos</p>
                         </div>
                         <svg class="project__icon" viewBox="0 0 48 48" aria-hidden="true">
-                            <rect x="6" y="10" width="36" height="24" rx="2"/>
-                            <path d="M18 40h12M24 34v6"/>
-                            <path d="M11 22h7l3-6 4 12 3-6h9"/>
+                            <path d="M8 10L24 26L40 10"/>
+                            <path d="M24 26v14"/>
+                            <path d="M14 40h20"/>
+                            <path d="M12 14h24"/>
                         </svg>
                     </div>
                     <p class="project__desc">
-                        Sistema de gestão do fluxo de exames de imagem de um hospital público: do pedido médico, com dados extraídos automaticamente do PDF, à autorização e ao agendamento na clínica parceira. Controla cotas por contrato, mantém auditoria de alterações e oferece um portal separado para as clínicas, sem expor o servidor interno à internet.
+                        Cardápio digital e bar de drinks para uma festa de 15 anos: pedidos em tempo real, painel do bartender, fila de espera ao vivo e aviso automático no celular do convidado quando o drink fica pronto — via QR code em cada mesa, sem app para instalar.
                     </p>
                     <div class="project__tags">
-                        <span>Django</span><span>PostgreSQL</span><span>Firebase</span>
+                        <span>Firebase RTDB</span><span>QR Code por mesa</span><span>JavaScript puro</span>
                     </div>
                     <div class="project__links">
-                        <a class="project__link" href="cdivision.html">
+                        <a class="project__link" href="menu-interativo.html">
                             Ver telas e detalhes <span aria-hidden="true">→</span>
                         </a>
+                        <span class="project__private">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg>
+                            Código privado
+                        </span>
                     </div>
                 </article>
 
@@ -349,7 +383,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>

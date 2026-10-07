@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <!-- CSS Exclusivo e Centralizado -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,10 +32,10 @@
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
             <!-- Logo transparente âmbar -->
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -63,7 +65,7 @@
                 </div>
                 <div class="titleblock__cell">
                     <span class="titleblock__label">Stack</span>
-                    <span class="titleblock__value">Django / PostgreSQL</span>
+                    <span class="titleblock__value">Django / SQLite</span>
                 </div>
                 <div class="titleblock__cell">
                     <span class="titleblock__label">Status</span>
@@ -98,8 +100,8 @@
 
             <!-- Destaque 1: Portal Institucional -->
             <div class="desktop-feature mt-4">
-                <img src="img/eletrosys/index.png" alt="Tela Index do EletroSys">
-                <h4>Portal Institucional (Vitrine)</h4>
+                <img src="img/eletrosys/index.webp" width="1200" height="571" alt="Tela Index do EletroSys">
+                <h3>Portal Institucional (Vitrine)</h3>
                 <p>A página inicial atua como a vitrine digital da Eletro União LTDA. Conta com uma apresentação
                     visual dinâmica (slideshow) e informações institucionais, projetada para estabelecer
                     credibilidade imediata junto aos clientes e empresas do setor.</p>
@@ -108,23 +110,23 @@
             <!-- Grid 2x2: Páginas Públicas Auxiliares -->
             <div class="desktop-grid">
                 <div class="desktop-feature">
-                    <img src="img/eletrosys/serv_prestados.png" alt="Tela de Serviços Prestados">
+                    <img src="img/eletrosys/serv_prestados.webp" width="1200" height="583" alt="Tela de Serviços Prestados">
                     <!-- Texto atualizado por você mantido aqui -->
-                    <h4>Serviços Prestados</h4>
+                    <h3>Serviços Prestados</h3>
                     <p>Apresenta o catálogo de serviços oferecidos pela Eletro União LTDA, permitindo que os clientes pesquisem por equipamentos ou tipos de serviços.</p>
                 </div>
 
                 <div class="desktop-feature">
-                    <img src="img/eletrosys/localizacao.png" alt="Tela Nossa Localização">
-                    <h4>Localização e Acesso</h4>
+                    <img src="img/eletrosys/localizacao.webp" width="1200" height="571" alt="Tela Nossa Localização">
+                    <h3>Localização e Acesso</h3>
                     <p>Módulo de informação logística para guiar os clientes fisicamente até a oficina em Lages/SC, facilitando a entrega e retirada de motores elétricos pesados e equipamentos industriais.</p>
                 </div>
             </div>
 
             <!-- Destaque Final: Painel de Gestão -->
             <div class="desktop-feature">
-                <img src="img/eletrosys/gestao.png" alt="Tela de Gestão Operacional e Relatórios">
-                <h4>Painel de Gestão Operacional (O Motor do ERP)</h4>
+                <img src="img/eletrosys/gestao.webp" width="1200" height="573" alt="Tela de Gestão Operacional e Relatórios">
+                <h3>Painel de Gestão Operacional (O Motor do ERP)</h3>
                 <p>A área restrita substitui completamente as anotações físicas. É utilizada pelos gestores para administrar clientes e fornecedores, monitorar o estoque de peças, formalizar vendas e ordens de serviço, e gerar inteligência financeira por meio de relatórios de fluxo de caixa.</p>
             </div>
 
@@ -136,15 +138,16 @@
             <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
             <h2>Bastidores Técnicos</h2>
             <p class="sheet__text">
-                A aplicação foi construída visando escalabilidade e segurança de acesso. O framework Django fornece a robustez necessária para as Views (regras de negócio) e o Admin (gerenciamento de conteúdo), enquanto o PostgreSQL assegura a integridade das transações financeiras e histórico de manutenções.
+                A aplicação foi construída com foco em segurança de acesso. O Django fornece as Views (regras de negócio) e o Admin (gerenciamento de conteúdo), e cada área do sistema é liberada pelas permissões nativas do Django, atribuídas por grupo de usuário: um atendente vê clientes, vendas e orçamentos, mas não funcionários nem candidaturas. Os dados ficam num banco SQLite, com backup em <code>.zip</code>. Uma suíte de 31 testes automatizados cobre permissões por perfil, senha temporária no primeiro acesso, validação de CPF/CNPJ e regras de exclusão de cadastros.
             </p>
 
             <ul class="stacklist">
                 <li>Python</li>
                 <li>Django Framework (Views & Admin)</li>
-                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>Permissões nativas por grupo</li>
+                <li>31 testes automatizados</li>
                 <li>Design UI/UX Responsivo</li>
-                <li>Autenticação / Níveis de Acesso</li>
             </ul>
         </div>
     </section>
@@ -154,7 +157,7 @@
 <footer class="stamp">
     <div class="stamp__inner">
         <!-- Logo transparente claro -->
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <!-- Adicionado o fallback de ano -->
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>

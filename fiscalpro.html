@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +30,10 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -103,8 +105,8 @@
             </p>
 
             <div class="desktop-feature mt-4">
-                <img src="img/fiscalpro/painel.png" alt="Tela do Painel de Alertas do FiscalPro">
-                <h4>Painel de Alertas</h4>
+                <img src="img/fiscalpro/painel.webp" width="1200" height="537" alt="Tela do Painel de Alertas do FiscalPro">
+                <h3>Painel de Alertas</h3>
                 <p>Recalcula a cada abertura os alertas de vencimento de vigência, de percentual de cota consumida
                     e de ritmo preditivo — que avisa quando, no ritmo atual de consumo, uma cota vai se esgotar antes
                     do fim do contrato, mesmo que o percentual ainda pareça baixo. Cada alerta pode ser marcado como
@@ -112,8 +114,8 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/fiscalpro/contratos.png" alt="Tela de listagem de Contratos do FiscalPro">
-                <h4>Contratos</h4>
+                <img src="img/fiscalpro/contratos.webp" width="1200" height="552" alt="Tela de listagem de Contratos do FiscalPro">
+                <h3>Contratos</h3>
                 <p>Listagem com busca por número, fornecedor ou objeto e filtro por status, ordenada pelo vencimento
                     mais próximo. Cada contrato concentra suas cotas, aditivos, prazos, documentos anexados e a
                     conciliação mensal do que foi executado.</p>
@@ -121,23 +123,23 @@
 
             <div class="desktop-grid">
                 <div class="desktop-feature">
-                    <img src="img/fiscalpro/novo-contrato.png" alt="Formulário de cadastro de Novo Contrato">
-                    <h4>Cadastro Completo</h4>
+                    <img src="img/fiscalpro/novo-contrato.webp" width="1200" height="779" alt="Formulário de cadastro de Novo Contrato">
+                    <h3>Cadastro Completo</h3>
                     <p>Dados da licitação, vigência, índice de reajuste, limite de acréscimo/supressão, tipo de cota
                         e contatos para envio de relatórios, num único formulário.</p>
                 </div>
 
                 <div class="desktop-feature">
-                    <img src="img/fiscalpro/configuracoes.png" alt="Tela de Configurações de alertas e ocorrências">
-                    <h4>Regras Configuráveis</h4>
+                    <img src="img/fiscalpro/configuracoes.webp" width="1200" height="792" alt="Tela de Configurações de alertas e ocorrências">
+                    <h3>Regras Configuráveis</h3>
                     <p>Limiares de alerta (dias antes do vencimento, percentuais de cota) e tipos de ocorrência da
                         conciliação mensal editáveis direto na interface, sem mexer em código.</p>
                 </div>
             </div>
 
             <div class="desktop-feature">
-                <img src="img/fiscalpro/backup.png" alt="Tela de Backup e Restauração">
-                <h4>Backup e Restauração</h4>
+                <img src="img/fiscalpro/backup.webp" width="1200" height="758" alt="Tela de Backup e Restauração">
+                <h3>Backup e Restauração</h3>
                 <p>Backup automático a cada 7 dias em <code>.zip</code> (banco + documentos anexados), com pasta de
                     destino configurável — apontar para uma pasta sincronizada pelo Google Drive garante uma cópia
                     fora da máquina sem integrar com nenhuma API de nuvem. Antes de restaurar, o app cria um backup
@@ -177,7 +179,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>

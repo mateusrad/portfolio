@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <!-- CSS Exclusivo e Centralizado -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,10 +32,10 @@
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
             <!-- Logo transparente âmbar -->
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -64,7 +66,7 @@
                 </div>
                 <div class="titleblock__cell">
                     <span class="titleblock__label">Stack</span>
-                    <span class="titleblock__value">Python</span>
+                    <span class="titleblock__value">Django / SQLite</span>
                 </div>
                 <div class="titleblock__cell">
                     <span class="titleblock__label">Status</span>
@@ -101,16 +103,16 @@
             </p>
 
             <div class="desktop-feature mt-4">
-                <img src="img/projeluz/index_busca.png" alt="Tela Index / Buscador">
-                <h4>Index (Buscador)</h4>
+                <img src="img/projeluz/index_busca.webp" width="1200" height="780" alt="Tela Index / Buscador">
+                <h3>Index (Buscador)</h3>
                 <p>A "porta de entrada" do sistema. Exibe a listagem completa dos projetos com uma barra de busca
                     inteligente e filtros avançados para localizar obras por cliente, título, endereço ou detalhes
                     técnicos.</p>
             </div>
 
             <div class="desktop-feature">
-                <img src="img/projeluz/detalhes.png" alt="Tela de Detalhamento do Projeto">
-                <h4>Detalhamento (Ficha Técnica)</h4>
+                <img src="img/projeluz/detalhes.webp" width="1200" height="810" alt="Tela de Detalhamento do Projeto">
+                <h3>Detalhamento (Ficha Técnica)</h3>
                 <p>Exibe todos os dados estruturados do cliente e a lista paginada de arquivos (PDFs, CADs, imagens)
                     vinculados ao projeto. Permite a visualização rápida ou o download direto dos documentos mapeados
                     na rede local.</p>
@@ -118,16 +120,16 @@
 
             <div class="desktop-grid">
                 <div class="desktop-feature">
-                    <img src="img/projeluz/edit_cliente.png" alt="Tela Editar Cliente">
-                    <h4>Atualização de Cliente</h4>
+                    <img src="img/projeluz/edit_cliente.webp" width="1190" height="573" alt="Tela Editar Cliente">
+                    <h3>Atualização de Cliente</h3>
                     <p>Formulário para atualizar as informações cadastrais (nome, CNPJ, telefone, e-mail).
                         Ao salvar, o sistema localiza e atualiza automaticamente os arquivos de backup de
                         todos os projetos vinculados a este cliente.</p>
                 </div>
 
                 <div class="desktop-feature">
-                    <img src="img/projeluz/edit_projeto.png" alt="Tela Editar Projeto">
-                    <h4>Sincronização de Projeto</h4>
+                    <img src="img/projeluz/edit_projeto.webp" width="1200" height="622" alt="Tela Editar Projeto">
+                    <h3>Sincronização de Projeto</h3>
                     <p>Página para atualizar os dados da obra (título, endereço, escopo). O sistema garante que
                         as alterações feitas na web sejam espelhadas fisicamente nos arquivos de texto e JSON
                         nativos nas pastas do Windows.</p>
@@ -135,8 +137,8 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/projeluz/report.png" alt="Modal de Report de Erro">
-                <h4>Report de Erro e Suporte</h4>
+                <img src="img/projeluz/report.webp" width="1183" height="840" alt="Modal de Report de Erro">
+                <h3>Report de Erro e Suporte</h3>
                 <p>Canal direto de suporte via e-mail integrado ao sistema. Permite que o usuário descreva
                     problemas operacionais e anexe capturas de tela, fornecendo feedback visual de processamento
                     em tempo real enquanto notifica o desenvolvedor.</p>
@@ -150,15 +152,23 @@
             <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
             <h2>Bastidores Técnicos</h2>
             <p class="sheet__text">
-                A solução roda diretamente nos servidores locais do cliente. Utilizando scripts Python,
-                as rotinas fazem o parser de arquivos de forma otimizada (sem sobrecarregar a leitura do
-                disco rígido), além de realizar operações de I/O em arquivos de texto e JSON, mantendo a
-                integridade dos dados entre a interface web e o sistema operacional Windows.
+                A solução roda diretamente nos servidores locais do cliente, com a interface web em Django e o
+                índice num banco SQLite. As rotinas em Python fazem o parser de arquivos de forma otimizada (sem
+                sobrecarregar a leitura do disco rígido), além de realizar operações de I/O em arquivos de texto e
+                JSON, mantendo a integridade dos dados entre a interface web e o sistema operacional Windows.
+            </p>
+            <p class="sheet__text">
+                Uma suíte de 53 testes automatizados cobre os pontos onde um erro custaria caro: a sincronização
+                nunca apaga o índice se a pasta de rede estiver inacessível ou vazia, arquivos fora da pasta-base
+                não podem ser servidos pelo navegador, e a busca encontra termos sem acento, ignora maiúsculas e
+                combina filtros corretamente.
             </p>
 
             <ul class="stacklist">
                 <li>Python</li>
-                <li>Automação de Tarefas</li>
+                <li>Django</li>
+                <li>SQLite</li>
+                <li>53 testes automatizados</li>
                 <li>Manipulação de Sistema de Arquivos (I/O)</li>
                 <li>Web Interface (Intranet)</li>
             </ul>
@@ -170,7 +180,7 @@
 <footer class="stamp">
     <div class="stamp__inner">
         <!-- Logo transparente claro -->
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <!-- Adicionado o fallback de ano -->
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>

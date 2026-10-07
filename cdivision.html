@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +30,10 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -102,8 +104,8 @@
             </p>
 
             <div class="desktop-feature mt-4">
-                <img src="img/cdivision/hub.png" alt="Hub de módulos do CDI Vision">
-                <h4>Hub de Módulos</h4>
+                <img src="img/cdivision/hub.webp" width="1200" height="531" alt="Hub de módulos do CDI Vision">
+                <h3>Hub de Módulos</h3>
                 <p>Ponto de entrada após o login: cada funcionário vê os módulos do seu perfil, entre Agendamentos da
                     Enfermagem, CDI, Logística e Transporte de pacientes e Administração. O controle de acesso é
                     checado no servidor antes de cada tela, não só escondido na interface.</p>
@@ -111,23 +113,23 @@
 
             <div class="desktop-grid">
                 <div class="desktop-feature">
-                    <img src="img/cdivision/enfermagem.png" alt="Módulo de Agendamentos da Enfermagem">
-                    <h4>Enfermagem</h4>
+                    <img src="img/cdivision/enfermagem.webp" width="1200" height="533" alt="Módulo de Agendamentos da Enfermagem">
+                    <h3>Enfermagem</h3>
                     <p>Registrar no sistema os exames solicitados pelo médico, acompanhar o andamento dos pedidos e consultar a agenda confirmada dos
                         pacientes internados.</p>
                 </div>
 
                 <div class="desktop-feature">
-                    <img src="img/cdivision/administracao.png" alt="Módulo de Administração">
-                    <h4>Administração</h4>
+                    <img src="img/cdivision/administracao.webp" width="1200" height="530" alt="Módulo de Administração">
+                    <h3>Administração</h3>
                     <p>Setores e leitos, equipe e perfis de acesso, e um painel de diagnóstico com os erros recentes do
                         sistema, alimentado automaticamente e pelo botão "Reportar Erro" presente em todas as telas.</p>
                 </div>
             </div>
 
             <div class="desktop-feature">
-                <img src="img/cdivision/modulo-cdi.png" alt="Módulo do Centro de Diagnóstico por Imagem">
-                <h4>Módulo do Centro de Diagnóstico</h4>
+                <img src="img/cdivision/modulo-cdi.webp" width="1200" height="543" alt="Módulo do Centro de Diagnóstico por Imagem">
+                <h3>Módulo do Centro de Diagnóstico</h3>
                 <p>Organizado em fluxo externo (pedidos ambulatoriais e agendamentos recebidos das clínicas parceiras),
                     fluxo interno (conferência e aprovação de exames feitos no próprio hospital) e gestão
                     (reagendamentos, cancelamentos e painel de auditoria). Cada contrato com uma clínica tem cota e
@@ -135,8 +137,8 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/cdivision/nova-solicitacao.png" alt="Formulário de nova solicitação de exame a partir de PDF">
-                <h4>Pedido a Partir do PDF</h4>
+                <img src="img/cdivision/nova-solicitacao.webp" width="1200" height="533" alt="Formulário de nova solicitação de exame a partir de PDF">
+                <h3>Pedido a Partir do PDF</h3>
                 <p>A enfermagem anexa o PDF do pedido médico e o sistema preenche sozinho os dados do paciente e o
                     procedimento, extraídos com pdfplumber e expressões regulares. Não usa IA nem tem custo por
                     chamada, porque o layout dos pedidos é previsível; o usuário só confere e corrige se for
@@ -144,15 +146,15 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/cdivision/fila-solicitacoes.png" alt="Fila de solicitações de exames, com dados de pacientes desfocados">
-                <h4>Fila de Solicitações</h4>
+                <img src="img/cdivision/fila-solicitacoes.webp" width="1200" height="540" alt="Fila de solicitações de exames, com dados de pacientes desfocados">
+                <h3>Fila de Solicitações</h3>
                 <p>Acompanhamento de cada pedido por status (pendente, autorizado, recusado, cancelado), busca por
                     paciente ou prontuário e lixeira com exclusão automática depois de 30 dias.</p>
             </div>
 
             <div class="desktop-feature">
-                <img src="img/cdivision/portal-clinicas.png" alt="Portal das clínicas parceiras, com dados de pacientes desfocados">
-                <h4>Portal das Clínicas Parceiras</h4>
+                <img src="img/cdivision/portal-clinicas.webp" width="1200" height="626" alt="Portal das clínicas parceiras, com dados de pacientes desfocados">
+                <h3>Portal das Clínicas Parceiras</h3>
                 <p>Site separado em que cada clínica parceira vê apenas os exames encaminhados a ela e informa a data e
                     a hora do agendamento, ou o motivo do cancelamento. A clínica só consegue alterar esses campos: os
                     dados do paciente nunca podem ser editados do lado dela, e toda alteração fica registrada num
@@ -176,6 +178,72 @@
                 banco e sobe.
             </p>
 
+            <figure class="arch-diagram">
+                <svg viewBox="0 0 910 300" role="img" aria-labelledby="arch-title arch-desc">
+                    <title id="arch-title">Arquitetura do CDI Vision</title>
+                    <desc id="arch-desc">O servidor Django fica dentro da rede do hospital e o portal das clínicas fica na internet. Os dois nunca se conectam: trocam dados apenas pelo Firebase Realtime Database.</desc>
+                    <defs>
+                        <marker id="arch-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                            <path class="arrowhead" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+
+                    <rect class="zone" x="20" y="40" width="240" height="248" rx="6"/>
+                    <text class="t-zone" x="34" y="60">REDE INTERNA DO HOSPITAL</text>
+                    <rect class="box" x="40" y="80" width="200" height="90" rx="4"/>
+                    <text class="t-title" x="140" y="110" text-anchor="middle">Django + PostgreSQL</text>
+                    <text class="t-sub" x="140" y="132" text-anchor="middle">Servidor Waitress</text>
+                    <text class="t-sub" x="140" y="152" text-anchor="middle">Pedidos · Cotas · Auditoria</text>
+                    <rect class="box" x="40" y="205" width="200" height="70" rx="4"/>
+                    <text class="t-title" x="140" y="232" text-anchor="middle">Funcionários</text>
+                    <text class="t-sub" x="140" y="254" text-anchor="middle">Login Django por perfil</text>
+                    <path class="arrow" d="M140 205 V174" marker-end="url(#arch-arrow)"/>
+
+                    <text class="t-zone" x="455" y="74" text-anchor="middle">FIREBASE (NUVEM)</text>
+                    <rect class="hub" x="345" y="88" width="220" height="112" rx="4"/>
+                    <text class="t-title" x="455" y="118" text-anchor="middle">Firebase Realtime DB</text>
+                    <text class="t-sub" x="455" y="140" text-anchor="middle">"caixa de correio"</text>
+                    <text class="t-sub" x="455" y="160" text-anchor="middle">encaminhamentos por clínica</text>
+                    <text class="t-sub" x="455" y="180" text-anchor="middle">PDF do pedido em base64</text>
+
+                    <path class="arrow" d="M242 115 H341" marker-end="url(#arch-arrow)"/>
+                    <text class="t-lbl" x="292" y="107" text-anchor="middle">envia pedido</text>
+                    <path class="arrow" d="M343 160 H244" marker-end="url(#arch-arrow)"/>
+                    <text class="t-lbl" x="292" y="178" text-anchor="middle">lê retorno</text>
+
+                    <text class="t-zone" x="680" y="60">INTERNET</text>
+                    <rect class="box" x="670" y="80" width="220" height="90" rx="4"/>
+                    <text class="t-title" x="780" y="110" text-anchor="middle">Portal das Clínicas</text>
+                    <text class="t-sub" x="780" y="132" text-anchor="middle">Firebase Hosting (estático)</text>
+                    <text class="t-sub" x="780" y="152" text-anchor="middle">Edita só 5 campos do pedido</text>
+                    <rect class="box" x="670" y="205" width="220" height="70" rx="4"/>
+                    <text class="t-title" x="780" y="228" text-anchor="middle">Clínicas parceiras</text>
+                    <text class="t-sub" x="780" y="248" text-anchor="middle">Login Firebase Auth</text>
+                    <text class="t-sub" x="780" y="264" text-anchor="middle">claim clinica_id</text>
+                    <path class="arrow" d="M780 205 V174" marker-end="url(#arch-arrow)"/>
+
+                    <path class="arrow" d="M567 115 H666" marker-end="url(#arch-arrow)"/>
+                    <text class="t-lbl" x="617" y="107" text-anchor="middle">lê seus exames</text>
+                    <path class="arrow" d="M668 160 H569" marker-end="url(#arch-arrow)"/>
+                    <text class="t-lbl" x="617" y="178" text-anchor="middle">agenda/cancela</text>
+                </svg>
+                <figcaption>O servidor interno e o portal das clínicas nunca se conectam diretamente: toda troca passa pelo Firebase Realtime Database.</figcaption>
+            </figure>
+
+            <p class="sheet__text">
+                São dois logins completamente separados. Os funcionários entram pelo sistema de usuários do Django,
+                com perfis por função; as clínicas entram pelo Firebase Authentication, com uma marcação no próprio
+                token (o <em>custom claim</em> <code>clinica_id</code>) que as regras do banco usam para garantir que
+                cada clínica só enxergue os próprios encaminhamentos e só altere data, hora, preparo e motivo de
+                cancelamento.
+            </p>
+            <p class="sheet__text">
+                Um trade-off deliberado: em vez do Firebase Storage, que passou a exigir cartão de crédito cadastrado
+                mesmo na faixa gratuita, cada página do PDF do pedido médico vai comprimida como imagem base64 dentro
+                do próprio registro no Realtime Database. Funciona porque os pedidos são documentos pequenos, e mantém
+                o custo de infraestrutura do projeto em zero.
+            </p>
+
             <ul class="stacklist">
                 <li>Python</li>
                 <li>Django</li>
@@ -193,7 +261,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>

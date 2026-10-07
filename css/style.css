@@ -28,6 +28,8 @@
 
 html { scroll-behavior: smooth; }
 
+section[id] { scroll-margin-top: 72px; }
+
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
@@ -403,6 +405,54 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .project__link:hover { color: var(--bp-amber); gap: 0.65rem; }
 
+.project__private {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    color: var(--bp-line-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.project__private svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
+/* ---------- Diagrama de arquitetura ---------- */
+
+.arch-diagram {
+    margin: var(--space-3) 0;
+    border: 1px solid var(--bp-line-faint);
+    background: var(--bp-bg);
+    padding: var(--space-2);
+    overflow-x: auto;
+}
+.arch-diagram svg {
+    display: block;
+    width: 100%;
+    min-width: 640px;
+    height: auto;
+}
+.arch-diagram .zone { fill: none; stroke: var(--bp-amber-dim); stroke-width: 1.2; stroke-dasharray: 6 4; }
+.arch-diagram .box { fill: var(--bp-bg-raised); stroke: var(--bp-line-dim); stroke-width: 1; }
+.arch-diagram .hub { fill: var(--bp-bg-deep); stroke: var(--bp-amber); stroke-width: 1.5; }
+.arch-diagram .arrow { fill: none; stroke: var(--bp-amber); stroke-width: 1.5; }
+.arch-diagram .arrowhead { fill: var(--bp-amber); }
+.arch-diagram text { font-family: var(--font-display); fill: var(--bp-line); }
+.arch-diagram .t-title { font-size: 14px; font-weight: 700; }
+.arch-diagram .t-sub { font-size: 10.5px; fill: var(--bp-line-dim); }
+.arch-diagram .t-lbl { font-size: 10.5px; fill: var(--bp-amber); }
+.arch-diagram .t-zone { font-size: 10px; letter-spacing: 0.08em; fill: var(--bp-amber); }
+.arch-diagram figcaption {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    color: var(--bp-line-dim);
+    margin-top: var(--space-1);
+}
+
 /* ---------- Contato ---------- */
 
 .contact-row {
@@ -472,7 +522,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     margin-bottom: var(--space-2);
     display: block;
 }
-.desktop-feature h4 {
+.desktop-feature h3 {
     color: var(--bp-amber);
     font-family: var(--font-display);
     margin: 0 0 0.5rem 0;
@@ -525,7 +575,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     padding: var(--space-2);
     flex-grow: 1;
 }
-.mobile-content h4 {
+.mobile-content h3 {
     font-family: var(--font-display);
     font-size: 0.9rem;
     color: var(--bp-line);

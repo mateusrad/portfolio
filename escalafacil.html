@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +30,10 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -101,8 +103,8 @@
             </p>
 
             <div class="desktop-feature mt-4">
-                <img src="img/escalafacil/calendario-resumo.png" alt="Painel de totais de horas por vínculo">
-                <h4>Painel de Totais por Vínculo</h4>
+                <img src="img/escalafacil/calendario-resumo.webp" width="1200" height="504" alt="Painel de totais de horas por vínculo">
+                <h3>Painel de Totais por Vínculo</h3>
                 <p>Dias úteis, carga horária, horas necessárias, horas feitas e saldo de cada vínculo, recalculados na
                     hora a partir dos turnos lançados. Nada fica pré-calculado no banco, então qualquer edição aparece
                     no saldo na mesma hora. Suporta regime semanal e plantão 12x60, feriados (inclusive os móveis,
@@ -110,16 +112,16 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/escalafacil/calendario-mes.png" alt="Calendário mensal com os turnos lançados">
-                <h4>Calendário do Mês</h4>
+                <img src="img/escalafacil/calendario-mes.webp" width="1200" height="536" alt="Calendário mensal com os turnos lançados">
+                <h3>Calendário do Mês</h3>
                 <p>Turnos coloridos por subsetor e identificados pelo vínculo, com detecção de conflito de horário mesmo
                     entre empregos diferentes e exportação direta para o Google Agenda (reexportar atualiza o evento
                     em vez de duplicar).</p>
             </div>
 
             <div class="desktop-feature">
-                <img src="img/escalafacil/escala-setor.png" alt="Grade da Escala do Setor, com nomes desfocados">
-                <h4>Escala do Setor</h4>
+                <img src="img/escalafacil/escala-setor.webp" width="1200" height="537" alt="Grade da Escala do Setor, com nomes desfocados">
+                <h3>Escala do Setor</h3>
                 <p>A planilha oficial enviada pela chefia é importada pelo admin: o app casa os nomes da planilha com a
                     conta de cada pessoa por um dicionário de apelidos, grava os turnos de todo mundo e publica uma
                     grade só-leitura para qualquer colega do setor conferir, inclusive quem ainda não usa o app. A
@@ -128,8 +130,8 @@
             </div>
 
             <div class="desktop-feature">
-                <img src="img/escalafacil/admin.png" alt="Área administrativa com cadastros e ferramentas de suporte">
-                <h4>Administração</h4>
+                <img src="img/escalafacil/admin.webp" width="1200" height="434" alt="Área administrativa com cadastros e ferramentas de suporte">
+                <h3>Administração</h3>
                 <p>Cadastro de instituições, vínculos, setores, tipos de turno, feriados e férias, além de ferramentas
                     de suporte para corrigir dados na conta de outro usuário, com registro de alterações e sem precisar
                     mexer no banco diretamente.</p>
@@ -139,26 +141,26 @@
 
             <div class="mobile-showcase">
                 <div class="mobile-mockup">
-                    <img src="img/escalafacil/mobile-calendario.jpg" alt="Calendário dia a dia no celular">
+                    <img src="img/escalafacil/mobile-calendario.webp" width="520" height="1167" alt="Calendário dia a dia no celular">
                     <div class="mobile-content">
-                        <h4>Calendário Dia a Dia</h4>
+                        <h3>Calendário Dia a Dia</h3>
                         <p>Abaixo de 640px, o grid do mês vira uma navegação turno a turno, com um resumo enxuto de
                             horas por vínculo.</p>
                     </div>
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/escalafacil/mobile-escala-setor.jpg" alt="Escala do Setor no celular, com nomes desfocados">
+                    <img src="img/escalafacil/mobile-escala-setor.webp" width="520" height="1425" alt="Escala do Setor no celular, com nomes desfocados">
                     <div class="mobile-content">
-                        <h4>Escala no Celular</h4>
+                        <h3>Escala no Celular</h3>
                         <p>A mesma grade oficial do setor, adaptada para a tela pequena.</p>
                     </div>
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/escalafacil/mobile-vinculos.jpg" alt="Cadastro de vínculos no celular">
+                    <img src="img/escalafacil/mobile-vinculos.webp" width="520" height="1320" alt="Cadastro de vínculos no celular">
                     <div class="mobile-content">
-                        <h4>Configuração de Vínculos</h4>
+                        <h3>Configuração de Vínculos</h3>
                         <p>Regime semanal ou plantão 12x60, carga diária, teto de horas extras e setor de cada
                             emprego.</p>
                     </div>
@@ -195,7 +197,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>

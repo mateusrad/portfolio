@@ -19,7 +19,9 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,10 +30,10 @@
 <header class="topbar">
     <div class="topbar__inner">
         <a class="seal" href="index.html" aria-label="Início">
-            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
         </a>
         <nav class="topnav" aria-label="Navegação principal">
-            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
         </nav>
     </div>
 </header>
@@ -102,9 +104,9 @@
             </p>
 
             <div class="mobile-mockup mobile-hero mt-4">
-                <img src="img/trainos/lista-treinos.jpg" alt="Tela Painel de Treinos">
+                <img src="img/trainos/lista-treinos.webp" width="610" height="1175" alt="Tela Painel de Treinos">
                 <div class="mobile-content">
-                    <h4>Painel de Treinos</h4>
+                    <h3>Painel de Treinos</h3>
                     <p>Tela inicial: lista os treinos ordenados pelo que está há mais tempo sem check-in, para o
                         atleta nunca perder de vista o grupo muscular mais atrasado. Cada card mostra duração
                         média estimada e a data do último check-in.</p>
@@ -113,18 +115,18 @@
 
             <div class="mobile-showcase">
                 <div class="mobile-mockup">
-                    <img src="img/trainos/upper-a-detalhe.jpg" alt="Tela de Execução do Treino Upper A">
+                    <img src="img/trainos/upper-a-detalhe.webp" width="205" height="1040" alt="Tela de Execução do Treino Upper A">
                     <div class="mobile-content">
-                        <h4>Execução do Treino</h4>
+                        <h3>Execução do Treino</h3>
                         <p>Cada série guarda repetições e carga, com checkbox de progresso conforme é concluída.
                             Alterar a carga grava no Firestore automaticamente, sem precisar salvar manualmente.</p>
                     </div>
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/trainos/lower-a.jpg" alt="Tela de Estrutura do Treino Lower A">
+                    <img src="img/trainos/lower-a.webp" width="610" height="1179" alt="Tela de Estrutura do Treino Lower A">
                     <div class="mobile-content">
-                        <h4>Estrutura Fixa por Dia</h4>
+                        <h3>Estrutura Fixa por Dia</h3>
                         <p>Os exercícios de cada dia são fixos — o atleta só ajusta carga, não a estrutura. Vídeo
                             demonstrativo disponível por exercício, e "Iniciar treino" dispara o cronômetro de
                             sessão, com finalização automática caso o atleta esqueça de encerrar.</p>
@@ -132,9 +134,9 @@
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/trainos/corrida.jpg" alt="Tela de Corrida e Zonas de Treino">
+                    <img src="img/trainos/corrida.webp" width="411" height="1280" alt="Tela de Corrida e Zonas de Treino">
                     <div class="mobile-content">
-                        <h4>Corrida & Zonas de Treino</h4>
+                        <h3>Corrida & Zonas de Treino</h3>
                         <p>A partir dos dados de um exame de esforço (FC máxima, limiares, VO2 máx), o app calcula
                             as zonas de treino (Z1 a Z5) e organiza os planos de corrida intervalada e contínua,
                             com registro de cada sessão.</p>
@@ -142,9 +144,9 @@
                 </div>
 
                 <div class="mobile-mockup">
-                    <img src="img/trainos/dexa.jpg" alt="Tela de Composição Corporal DEXA">
+                    <img src="img/trainos/dexa.webp" width="610" height="1194" alt="Tela de Composição Corporal DEXA">
                     <div class="mobile-content">
-                        <h4>Composição Corporal (DEXA)</h4>
+                        <h3>Composição Corporal (DEXA)</h3>
                         <p>Histórico de exames de composição corporal, com peso, percentual de gordura, massa
                             magra/gorda e taxa andrógino-ginóide, para acompanhar a evolução entre exames.</p>
                     </div>
@@ -154,9 +156,9 @@
             <h3 style="text-align: center; margin-bottom: 2rem;">Painel Multiatleta</h3>
 
             <div class="mobile-mockup mobile-hero">
-                <img src="img/trainos/usuarios-admin.jpg" alt="Tela de Painel Administrativo de Usuários">
+                <img src="img/trainos/usuarios-admin.webp" width="610" height="1152" alt="Tela de Painel Administrativo de Usuários">
                 <div class="mobile-content">
-                    <h4>Administração de Atletas</h4>
+                    <h3>Administração de Atletas</h3>
                     <p>Área restrita mostra todos os atletas cadastrados, com acessos e treinos realizados, e
                         permite bloquear o acesso de alguém sem excluir a conta — reforçado tanto na interface
                         quanto nas regras de segurança do banco.</p>
@@ -193,7 +195,7 @@
 
 <footer class="stamp">
     <div class="stamp__inner">
-        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
         <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
     </div>
 </footer>
