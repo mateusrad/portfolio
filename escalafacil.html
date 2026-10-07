@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscalaFácil — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto EscalaFácil, app web de controle de escala e banco de horas para profissionais com mais de um vínculo, com importação da escala oficial do setor.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/escalafacil.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="EscalaFácil — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto EscalaFácil, app web de controle de escala e banco de horas para profissionais com mais de um vínculo, com importação da escala oficial do setor.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/escalafacil/calendario-resumo.png">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/escalafacil.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">EscalaFácil</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Controle de Escala e Banco de Horas para Múltiplos Vínculos</p>
+            <p class="hero__pitch">App web que substituiu uma planilha de controle de plantões: o profissional lança
+                os turnos num calendário e o sistema calcula sozinho horas feitas, horas necessárias e saldo do banco
+                de horas, separadamente por vínculo empregatício. Também importa a escala oficial do setor e a
+                publica para toda a equipe.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Equipe de Setor Hospitalar</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Web App / PWA</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">JavaScript / Firebase</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Dois vínculos, uma planilha frágil</h2>
+            <p class="sheet__text">
+                Quem trabalha em turnos (plantões diurnos e noturnos, feriados, horas extras) e tem mais de um vínculo
+                no mesmo hospital precisa saber, a qualquer momento, quantas horas já fez e quantas ainda faltam em
+                cada contrato. Esse controle vivia numa planilha Excel cheia de fórmulas, atualizada à mão.
+            </p>
+            <p class="sheet__text">
+                Além disso, a chefia do setor envia todo mês a escala oficial em planilha, e cada pessoa transcrevia
+                os próprios plantões. O desafio era automatizar essa importação para a equipe inteira, mantendo os
+                dados de cada pessoa isolados dos outros.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                No desktop, o calendário mostra o mês inteiro com os turnos de todos os vínculos sobrepostos; no
+                celular, vira uma navegação dia a dia. Nas imagens abaixo, o nome da instituição e os nomes dos
+                colegas na escala foram desfocados.
+            </p>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/escalafacil/calendario-resumo.png" alt="Painel de totais de horas por vínculo">
+                <h4>Painel de Totais por Vínculo</h4>
+                <p>Dias úteis, carga horária, horas necessárias, horas feitas e saldo de cada vínculo, recalculados na
+                    hora a partir dos turnos lançados. Nada fica pré-calculado no banco, então qualquer edição aparece
+                    no saldo na mesma hora. Suporta regime semanal e plantão 12x60, feriados (inclusive os móveis,
+                    calculados a partir da data da Páscoa), férias, licenças e adicional noturno.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/escalafacil/calendario-mes.png" alt="Calendário mensal com os turnos lançados">
+                <h4>Calendário do Mês</h4>
+                <p>Turnos coloridos por subsetor e identificados pelo vínculo, com detecção de conflito de horário mesmo
+                    entre empregos diferentes e exportação direta para o Google Agenda (reexportar atualiza o evento
+                    em vez de duplicar).</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/escalafacil/escala-setor.png" alt="Grade da Escala do Setor, com nomes desfocados">
+                <h4>Escala do Setor</h4>
+                <p>A planilha oficial enviada pela chefia é importada pelo admin: o app casa os nomes da planilha com a
+                    conta de cada pessoa por um dicionário de apelidos, grava os turnos de todo mundo e publica uma
+                    grade só-leitura para qualquer colega do setor conferir, inclusive quem ainda não usa o app. A
+                    importação substitui só o que veio da planilha anterior, então uma escala corrigida sobrescreve a
+                    provisória sem apagar o que cada um lançou manualmente.</p>
+            </div>
+
+            <div class="desktop-feature">
+                <img src="img/escalafacil/admin.png" alt="Área administrativa com cadastros e ferramentas de suporte">
+                <h4>Administração</h4>
+                <p>Cadastro de instituições, vínculos, setores, tipos de turno, feriados e férias, além de ferramentas
+                    de suporte para corrigir dados na conta de outro usuário, com registro de alterações e sem precisar
+                    mexer no banco diretamente.</p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 2rem;">Versão Mobile (PWA)</h3>
+
+            <div class="mobile-showcase">
+                <div class="mobile-mockup">
+                    <img src="img/escalafacil/mobile-calendario.jpg" alt="Calendário dia a dia no celular">
+                    <div class="mobile-content">
+                        <h4>Calendário Dia a Dia</h4>
+                        <p>Abaixo de 640px, o grid do mês vira uma navegação turno a turno, com um resumo enxuto de
+                            horas por vínculo.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/escalafacil/mobile-escala-setor.jpg" alt="Escala do Setor no celular, com nomes desfocados">
+                    <div class="mobile-content">
+                        <h4>Escala no Celular</h4>
+                        <p>A mesma grade oficial do setor, adaptada para a tela pequena.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/escalafacil/mobile-vinculos.jpg" alt="Cadastro de vínculos no celular">
+                    <div class="mobile-content">
+                        <h4>Configuração de Vínculos</h4>
+                        <p>Regime semanal ou plantão 12x60, carga diária, teto de horas extras e setor de cada
+                            emprego.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Sem framework, sem build, sem servidor</h2>
+            <p class="sheet__text">
+                HTML, CSS e JavaScript puro com módulos ES nativos, sem nenhuma dependência de NPM nem etapa de build.
+                O login é com Google via Firebase Authentication, os dados ficam no Cloud Firestore isolados por
+                usuário pelas regras de segurança (que também validam o formato de cada turno gravado), e a
+                hospedagem é no Firebase Hosting. Bibliotecas pesadas, como o leitor de planilhas, só são carregadas
+                na tela que precisa delas. O cálculo de horas fica em funções puras cobertas por testes automatizados.
+            </p>
+
+            <ul class="stacklist">
+                <li>JavaScript (ES Modules)</li>
+                <li>Firebase Authentication</li>
+                <li>Cloud Firestore</li>
+                <li>Firebase Hosting</li>
+                <li>Google Calendar API</li>
+                <li>Importação .xlsx / .ods</li>
+                <li>PWA Instalável</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f7539add96ed4b80a56f3465349fbc16"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
