@@ -421,6 +421,37 @@ ul { list-style: none; margin: 0; padding: 0; }
     stroke-width: 1.5;
 }
 
+/* Projetos públicos (demonstrações): selo de demonstração + link para a versão publicada */
+.project__meta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-2);
+}
+.project__live {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    color: var(--bp-amber);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bp-amber-dim);
+}
+.project__live:hover { border-color: var(--bp-amber); }
+
+.cta-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: var(--space-3);
+    padding: 0.6rem 1rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--bp-amber);
+    text-decoration: none;
+    border: 1px solid var(--bp-amber-dim);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.cta-live:hover { border-color: var(--bp-amber); background-color: rgba(232, 163, 61, 0.08); }
+
 /* ---------- Diagrama de arquitetura ---------- */
 
 .arch-diagram {
@@ -587,6 +618,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     margin: 0;
     line-height: 1.4;
 }
+.mobile-showcase + .desktop-grid { margin-top: var(--space-4); }
 .mobile-hero {
     max-width: 320px;
     margin: 0 auto var(--space-4) auto;

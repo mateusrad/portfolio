@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencial Vila Aurora (demo) — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto Residencial Vila Aurora, landing page de demonstração para lançamento imobiliário, feita em HTML, CSS e JavaScript puros, com galeria, plantas em SVG e formulário validado.">
+    <link rel="canonical" href="https://mateusrad.github.io/portfolio/vila-aurora.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Residencial Vila Aurora (demo) — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Detalhes do projeto Residencial Vila Aurora, landing page de demonstração para lançamento imobiliário, feita em HTML, CSS e JavaScript puros, com galeria, plantas em SVG e formulário validado.">
+    <meta property="og:image" content="https://mateusrad.github.io/portfolio/img/vila-aurora/og-image.jpg">
+    <meta property="og:url" content="https://mateusrad.github.io/portfolio/vila-aurora.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-monogram-amber.png" width="256" height="256" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">Residencial Vila Aurora (demo)</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Landing Page de Lançamento Imobiliário</p>
+            <p class="hero__pitch">Página de demonstração para o lançamento de um residencial fictício: foto em tela
+                cheia, galeria com visualizador próprio, plantas desenhadas em SVG e formulário de contato com
+                validação. Feita para mostrar, funcionando, o que uma construtora ou corretor recebe numa landing
+                page sob medida.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Demonstração (Empreendimento Fictício)</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Landing Page / Captação de Contatos</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">HTML / CSS / JavaScript</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Demo Publicada</span>
+                </div>
+            </div>
+
+            <a class="cta-live" href="https://mateusrad.github.io/demo-lancamento-imobiliario/" target="_blank" rel="noopener">
+                Ver página ao vivo <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Transformar visita em contato, pelo celular</h2>
+            <p class="sheet__text">
+                A página de um lançamento imobiliário tem um único objetivo: fazer quem chega por um anúncio deixar
+                nome e telefone para o corretor. Quase todo esse tráfego vem do celular, muitas vezes com internet
+                fraca, e a página precisa carregar rápido mesmo cheia de fotos grandes, apresentar plantas legíveis
+                numa tela pequena e não perder o contato por causa de um telefone digitado errado.
+            </p>
+            <p class="sheet__text">
+                O desafio era entregar tudo isso sem framework e sem servidor, numa página que qualquer pessoa
+                consiga abrir e testar, e deixar claro desde o primeiro segundo que o empreendimento, a construtora e
+                o endereço são fictícios.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                Uma página única, pensada primeiro para o celular, que conduz o visitante do impacto da foto de
+                fachada até o formulário: diferenciais, galeria, plantas, localização e contato. Um botão fixo de
+                WhatsApp acompanha a rolagem. As fotos são ilustrativas, de banco gratuito.
+            </p>
+
+            <div class="desktop-feature mt-4">
+                <img src="img/vila-aurora/hero.webp" width="1200" height="700" alt="Primeira tela da landing page com foto de fachada em tela cheia e selo Lançamento">
+                <h3>Primeira Tela</h3>
+                <p>Foto de fachada em tela cheia, selo "Lançamento", resumo do empreendimento (dormitórios, metragem e
+                    vagas) e o botão "Quero saber mais", que rola direto até o formulário. A foto principal é
+                    pré-carregada no tamanho certo para cada tela, para aparecer o mais cedo possível.</p>
+            </div>
+
+            <div class="mobile-showcase">
+                <div class="mobile-mockup">
+                    <img src="img/vila-aurora/mobile-hero.webp" width="585" height="1050" alt="Primeira tela da landing page no celular">
+                    <div class="mobile-content">
+                        <h3>Mobile First</h3>
+                        <p>Layout desenhado primeiro para o celular, de 360 px até o desktop, em pé e deitado,
+                            com a faixa de aviso de demonstração sempre no topo.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/vila-aurora/mobile-plantas.webp" width="585" height="1050" alt="Planta do apartamento de 2 dormitórios desenhada em SVG, com abas de seleção">
+                    <div class="mobile-content">
+                        <h3>Plantas em SVG</h3>
+                        <p>Plantas de 2 e 3 dormitórios desenhadas em SVG, com nome e metragem de cada cômodo
+                            (as áreas somam a área privativa). Abas navegáveis pelo teclado e toque para ampliar.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/vila-aurora/mobile-formulario.webp" width="585" height="1050" alt="Formulário de contato com telefone formatado e mensagem de e-mail inválido">
+                    <div class="mobile-content">
+                        <h3>Formulário Validado</h3>
+                        <p>Máscara de telefone enquanto digita e mensagens de erro claras, mostradas só depois que
+                            a pessoa sai do campo, e anunciadas também para leitores de tela.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/vila-aurora/mobile-sucesso.webp" width="585" height="1050" alt="Mensagem de contato recebido após o envio do formulário">
+                    <div class="mobile-content">
+                        <h3>Envio Simulado</h3>
+                        <p>Na demonstração, nenhum dado sai do navegador. O código já traz, comentado, o caminho
+                            para ligar o formulário ao FormSubmit (contatos por e-mail) ou ao Firebase.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/vila-aurora/lightbox.webp" width="1200" height="700" alt="Visualizador de fotos aberto na foto da piscina, com setas e contador" loading="lazy">
+                    <h3>Galeria com Visualizador Próprio</h3>
+                    <p>Oito fotos com visualizador feito do zero, sem biblioteca: setas, teclado, deslizar o dedo
+                        no celular e Esc para fechar, com legenda e contador anunciados para leitores de tela.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/vila-aurora/localizacao.webp" width="1200" height="700" alt="Seção de localização com lista de pontos próximos e mapa" loading="lazy">
+                    <h3>Localização</h3>
+                    <p>Pontos próximos com distância e tempo a pé ou de carro, e um mapa do OpenStreetMap que só
+                        carrega quando o visitante chega perto da seção, sem pesar na abertura da página.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Leve, acessível e pronta para virar real</h2>
+            <p class="sheet__text">
+                A página é HTML, CSS e JavaScript puros, sem framework, sem etapa de build e sem nenhuma
+                dependência. O visualizador de fotos usa o elemento nativo <code>&lt;dialog&gt;</code> do
+                navegador, que já prende o foco e fecha com Esc. As regras do formulário ficam em funções separadas,
+                cobertas por 7 testes automatizados rodando no test runner que já vem no Node.
+            </p>
+            <p class="sheet__text">
+                No Lighthouse para celular, medido no link publicado, a página tirou 97 em desempenho e 100 em
+                acessibilidade, boas práticas e SEO. Para isso, as fotos estão em WebP de até 200 KB, as fontes
+                carregam sem travar a página, as animações respeitam quem pediu menos movimento no sistema e o
+                contraste de todas as cores foi calculado para passar no padrão WCAG AA. Para usar com um cliente
+                real, basta trocar textos e fotos, ligar o formulário e o link do WhatsApp e remover os avisos de
+                demonstração.
+            </p>
+
+            <ul class="stacklist">
+                <li>HTML / CSS / JavaScript</li>
+                <li>SVG</li>
+                <li>Node Test Runner</li>
+                <li>OpenStreetMap</li>
+                <li>GitHub Pages</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-monogram-light.png" width="256" height="256" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f7539add96ed4b80a56f3465349fbc16"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
