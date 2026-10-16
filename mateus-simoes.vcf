@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rosa;Mateus;Simões da;;
+FN:Mateus Simões da Rosa
+TITLE:Desenvolvedor de sistemas sob medida
+TEL;TYPE=CELL:+55 49 98411-1469
+EMAIL;TYPE=INTERNET:mateusrad@gmail.com
+URL:https://mateusrad.github.io/portfolio/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/mateusrad
+X-SOCIALPROFILE;TYPE=github:https://github.com/mateusrad
+ADR;TYPE=WORK:;;;Lages;SC;;Brasil
+NOTE:Web, apps, desktop e landing pages. LinkedIn: linkedin.com/in/mateusrad · GitHub: github.com/mateusrad
+END:VCARD
