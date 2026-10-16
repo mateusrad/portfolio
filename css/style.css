@@ -437,11 +437,16 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .project__live:hover { border-color: var(--bp-amber); }
 
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+}
 .cta-live {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    margin-top: var(--space-3);
     padding: 0.6rem 1rem;
     font-family: var(--font-display);
     font-size: 0.85rem;
