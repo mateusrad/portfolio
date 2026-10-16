@@ -22,4 +22,4 @@ Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://mateusr
 - A classe `mt-4` é usada nas páginas de projeto, mas não existe no CSS (não faz nada hoje).
 
 ## Próximo passo
-Publicar `cartao.html`, os logos recortados e o LinkedIn (commit e push aguardam o OK do Mateus). Depois, testar o "Salvar contato" num celular Android e num iPhone.
+Cartão, logos recortados e LinkedIn publicados (commit `4e5bd9f`, 2026-10-16). Próximo: testar o "Salvar contato" num celular Android e num iPhone.
