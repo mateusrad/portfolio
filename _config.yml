@@ -1,0 +1,7 @@
+# Configuração do GitHub Pages (Jekyll).
+# Arquivos internos do projeto: continuam no repositório, mas não são
+# publicados no site (portfolio.msr-dev.com.br).
+exclude:
+  - docs/
+  - PROGRESSO.md
+  - README.md

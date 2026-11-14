@@ -13,6 +13,7 @@ Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://portfol
 - LinkedIn no contato da home (2026-10-16).
 - Contato profissional (2026-11-14): e-mail `rosams.dev@gmail.com` e WhatsApp (49) 99160-3779 na home, no cartão e no vCard. O telefone agora aparece também na home (antes ficava só no cartão), a pedido do Mateus. Os links do WhatsApp abrem com mensagem pronta, diferente em cada lugar, para saber de onde veio o contato: na home, "Vi seu portfólio…"; no cartão, "Peguei seu contato pelo cartão digital…". O `.gitattributes` mantém o vCard com quebras de linha CRLF (o `core.autocrlf` estava convertendo para LF).
 - Subdomínio `portfolio.msr-dev.com.br` (2026-11-14): CNAME `portfolio` → `mateusrad.github.io` no Registro.br, domínio cadastrado no GitHub Pages (arquivo `CNAME` na raiz, que não pode ser apagado), certificado HTTPS aprovado (válido até 2027-02-12, renovado pelo GitHub) e "Enforce HTTPS" ligado. As URLs absolutas (canonical, `og:url`, `og:image`, `sitemap.xml`, `robots.txt`, vCard e o texto do cartão) já usam o domínio novo. Os links do demo continuam em `mateusrad.github.io/demo-lancamento-imobiliario`.
+- Arquivos internos fora do site (2026-11-14): o `_config.yml` tira `docs/`, `PROGRESSO.md` e `README.md` do site publicado (eles continuam no repositório público). Por isso, nunca escrever dados pessoais nos resumos de sessão.
 - Performance e acessibilidade 100 no Lighthouse (home e CDI Vision, medição de 07/10). Cloudflare Web Analytics em todas as páginas.
 
 ## Pendências
