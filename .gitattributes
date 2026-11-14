@@ -2,3 +2,10 @@
 # "-text" impede o Git de converter para LF ao gravar no repositório,
 # então o GitHub Pages serve o arquivo exatamente como está no disco.
 *.vcf -text
+
+# Arquivos internos: ficam fora do "git archive" de entrega
+docs/sessions/ export-ignore
+CLAUDE.md export-ignore
+.claude/ export-ignore
+PROGRESSO.md export-ignore
+REVISOES.md export-ignore
