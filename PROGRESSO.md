@@ -1,6 +1,6 @@
 # Progresso: Portfólio (Mateus Simões da Rosa)
 
-Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://mateusrad.github.io/portfolio/
+Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://portfolio.msr-dev.com.br/ (o endereço antigo, https://mateusrad.github.io/portfolio/, redireciona para ele)
 
 ## Pronto
 - Home com 9 projetos, em ordem de força do caso: CDI Vision, EscalaFácil, FiscalPro, EletroSys, Projeluz, TrainOS, Lista de Presentes, Menu Interativo e Residencial Vila Aurora.
@@ -11,6 +11,8 @@ Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://mateusr
 - Cartão de visita digital: 4 modelos no canvas https://claude.ai/artifact/V5Co9GymXuzKZTaKpMJUEy (privado). O escolhido (modelo A) virou a página `cartao.html`, com WhatsApp, e-mail, portfólio, LinkedIn e GitHub, e o botão "Salvar contato", que baixa `mateus-simoes.vcf`. A página tem `noindex` (não aparece em buscadores, porque mostra o telefone) e não está no `sitemap.xml`. Os modelos C e D ainda têm o espaço do QR code vazio.
 - Logos recortados (2026-10-16): `img/logo-amber.png` e `img/logo-light.png`, sem a margem transparente do original, usados no topo e no rodapé das 10 páginas e no cartão.
 - LinkedIn no contato da home (2026-10-16).
+- Contato profissional (2026-11-14): e-mail `rosams.dev@gmail.com` e WhatsApp (49) 99160-3779 na home, no cartão e no vCard. O telefone agora aparece também na home (antes ficava só no cartão), a pedido do Mateus. O `.gitattributes` mantém o vCard com quebras de linha CRLF (o `core.autocrlf` estava convertendo para LF).
+- Subdomínio `portfolio.msr-dev.com.br` (2026-11-14): CNAME `portfolio` → `mateusrad.github.io` no Registro.br, domínio cadastrado no GitHub Pages (arquivo `CNAME` na raiz, que não pode ser apagado), certificado HTTPS aprovado (válido até 2027-02-12, renovado pelo GitHub) e "Enforce HTTPS" ligado. As URLs absolutas (canonical, `og:url`, `og:image`, `sitemap.xml`, `robots.txt`, vCard e o texto do cartão) já usam o domínio novo. Os links do demo continuam em `mateusrad.github.io/demo-lancamento-imobiliario`.
 - Performance e acessibilidade 100 no Lighthouse (home e CDI Vision, medição de 07/10). Cloudflare Web Analytics em todas as páginas.
 
 ## Pendências
@@ -22,4 +24,4 @@ Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://mateusr
 - A classe `mt-4` é usada nas páginas de projeto, mas não existe no CSS (não faz nada hoje).
 
 ## Próximo passo
-Cartão, logos recortados e LinkedIn publicados (commit `4e5bd9f`, 2026-10-16). Próximo: testar o "Salvar contato" num celular Android e num iPhone.
+Depois de publicar: cadastrar `https://portfolio.msr-dev.com.br/` no Google Search Console e enviar o `sitemap.xml` (opcional), atualizar o link do portfólio no LinkedIn e na bio do Instagram, e testar o "Salvar contato" (já com o contato novo) num celular Android e num iPhone.

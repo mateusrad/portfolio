@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mateusrad.github.io/portfolio/sitemap.xml
+Sitemap: https://portfolio.msr-dev.com.br/sitemap.xml
