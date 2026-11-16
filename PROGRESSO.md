@@ -17,7 +17,6 @@ Site estático (HTML, CSS e JS puros) publicado no GitHub Pages: https://portfol
 - Performance e acessibilidade 100 no Lighthouse (home e CDI Vision, medição de 07/10). Cloudflare Web Analytics em todas as páginas.
 
 ## Pendências
-- Apagar `img/logo-monogram-amber.png` e `img/logo-monogram-light.png`, que ficaram sem uso (aguarda o OK do Mateus).
 - Números de impacto nos textos (usuários, contratos, exames por mês): dependem de dados do Mateus.
 
 ## Melhorias opcionais
