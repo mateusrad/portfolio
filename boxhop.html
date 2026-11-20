@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxHop — Estudo de Caso | Mateus Simões da Rosa</title>
+    <meta name="description" content="Detalhes do projeto BoxHop, sistema de reservas para boxes de CrossFit e Hyrox: o aluno reserva pelo celular, paga por Pix e a vaga é confirmada sozinha. Em uso num box real.">
+    <link rel="canonical" href="https://portfolio.msr-dev.com.br/boxhop.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="BoxHop — Estudo de Caso | Mateus Simões da Rosa">
+    <meta property="og:description" content="Sistema de reservas para boxes de CrossFit e Hyrox: o aluno reserva pelo celular, paga por Pix e a vaga é confirmada sozinha. Em uso num box real.">
+    <meta property="og:image" content="https://portfolio.msr-dev.com.br/img/boxhop/og-image.jpg">
+    <meta property="og:url" content="https://portfolio.msr-dev.com.br/boxhop.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="seal" href="index.html" aria-label="Início">
+            <img src="img/logo-amber.png" width="148" height="121" alt="Logo Mateus Simões da Rosa" class="seal__logo">
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+            <a href="index.html#projetos"><span>←</span> Voltar ao Portfólio</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <section class="hero" id="topo">
+        <div class="hero__grid-overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+            <p class="eyebrow">FOLHA Nº 01 — DETALHES DO PROJETO</p>
+            <h1 class="hero__name">BoxHop</h1>
+            <svg class="hero__line" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true">
+                <path id="hero-line-path" d="M0,6 L400,6" />
+            </svg>
+            <p class="hero__role">Reservas, Pix e Gestão para Boxes de CrossFit e Hyrox</p>
+            <p class="hero__pitch">App que substituiu a lista de presença no WhatsApp de um box: o aluno reserva a
+                aula pelo celular, paga por Pix e a vaga é confirmada sozinha assim que o banco avisa. O box acompanha
+                turmas, check-in, lista de espera e financeiro num painel. Um único sistema atende vários boxes, cada
+                um com a própria marca.</p>
+
+            <div class="titleblock titleblock--alt" role="group" aria-label="Ficha técnica">
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Aplicação</span>
+                    <span class="titleblock__value">Boxes de CrossFit e Hyrox</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Tipo</span>
+                    <span class="titleblock__value">Web App / PWA</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Stack</span>
+                    <span class="titleblock__value">Django / React / PostgreSQL</span>
+                </div>
+                <div class="titleblock__cell">
+                    <span class="titleblock__label">Status</span>
+                    <span class="titleblock__value">Em Produção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner reveal">
+            <p class="sheet__tag">FOLHA Nº 02 — O DESAFIO</p>
+            <h2>Uma lista no WhatsApp com mais de 200 pessoas</h2>
+            <p class="sheet__text">
+                O box tinha começado uma modalidade nova e organizava as aulas por uma lista num grupo de WhatsApp: o
+                aluno colocava o nome e pagava depois. Na prática, a cobrança era manual, havia quem saísse da lista e
+                passasse a vaga para outra pessoa, e ninguém sabia ao certo quem tinha pago e quem tinha vindo.
+            </p>
+            <p class="sheet__text">
+                O app de gestão que o box já usava cobra por aluno, o que não fazia sentido para uma modalidade ainda em
+                teste. O desafio era garantir a vaga só com o pagamento feito, sem ninguém do box conferir comprovante,
+                e deixar horários, vagas, valores e regras de cancelamento nas mãos do próprio box.
+            </p>
+        </div>
+    </section>
+
+    <section class="sheet">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 03 — A SOLUÇÃO</p>
+            <h2>Interface e Funcionalidades</h2>
+            <p class="sheet__text">
+                O sistema está em uso num box real. Para preservar os dados dos alunos, as telas abaixo são do
+                <strong>Volt Box</strong>, um box fictício de demonstração que roda no mesmo sistema, com nomes,
+                e-mails e valores inventados. Posso mostrar o BoxHop funcionando ao vivo numa conversa.
+            </p>
+
+            <h3 style="text-align: center; margin-bottom: 2rem;">App do Aluno (PWA)</h3>
+
+            <div class="mobile-showcase mobile-showcase--seis">
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-inicio.webp" width="469" height="1016" alt="Tela inicial do aluno com próximas aulas, treino do dia e avisos do box" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Início</h3>
+                        <p>Próximas aulas reservadas, o treino do dia e os avisos do box. Instala direto pelo link,
+                            sem passar pela loja de apps.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-aulas.webp" width="469" height="1016" alt="Grade de aulas com vagas restantes e aula lotada" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Grade de Aulas</h3>
+                        <p>Vagas restantes em cada horário. Aula lotada? O aluno entra na lista de espera e é avisado
+                            se abrir uma vaga.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-reservar.webp" width="469" height="1015" alt="Confirmação de reserva com valor e regras de cancelamento" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Reserva</h3>
+                        <p>Antes de confirmar, o aluno vê o valor, por quanto tempo a vaga fica separada e até
+                            quando pode cancelar.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-pix.webp" width="469" height="1015" alt="Pix aguardando pagamento com contagem regressiva" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Pagamento por Pix</h3>
+                        <p>QR Code e código copia e cola, com contagem regressiva. Se o tempo acabar sem pagamento,
+                            a vaga volta para a grade.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-vaga-garantida.webp" width="469" height="1015" alt="Confirmação de pagamento com a vaga garantida" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Vaga Garantida</h3>
+                        <p>Quando o banco confirma o Pix, a vaga é garantida sozinha. O aluno também vê quem mais
+                            vai treinar com ele.</p>
+                    </div>
+                </div>
+
+                <div class="mobile-mockup">
+                    <img src="img/boxhop/mobile-wod.webp" width="469" height="1015" alt="Treino do dia e botão de check-in" loading="lazy">
+                    <div class="mobile-content">
+                        <h3>Treino do Dia e Check-in</h3>
+                        <p>O treino publicado pelo coach e o check-in pelo próprio celular, liberado algumas horas
+                            antes da aula.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 3rem 0 2rem;">Painel do Box</h3>
+
+            <div class="desktop-feature">
+                <img src="img/boxhop/painel.webp" width="800" height="600" alt="Painel do box com alunos ativos, ocupação e presença da semana" loading="lazy">
+                <h3>Painel</h3>
+                <p>Alunos ativos no mês, ocupação e presença da semana, a evolução da ocupação nas últimas semanas e
+                    quem está há dias sem treinar, para o box chamar de volta antes de perder o aluno. Valores em
+                    dinheiro ficam só no Financeiro.</p>
+            </div>
+
+            <div class="desktop-grid">
+                <div class="desktop-feature">
+                    <img src="img/boxhop/aulas-semana.webp" width="799" height="600" alt="Quadro das aulas da semana com vagas ocupadas" loading="lazy">
+                    <h3>Aulas da Semana</h3>
+                    <p>As aulas são geradas a partir das turmas fixas. O box muda vagas, cancela uma aula ou cria uma
+                        aula extra; ao cancelar, as reservas são canceladas e o Pix é estornado.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/boxhop/alunos-da-aula.webp" width="800" height="600" alt="Lista de alunos de uma aula com vaga, check-in e pagamento" loading="lazy">
+                    <h3>Alunos de Cada Aula</h3>
+                    <p>Quem vai, a situação do pagamento e o check-in. Quem paga em dinheiro no balcão também é
+                        registrado ali, e a lista de espera aparece logo abaixo.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/boxhop/alunos.webp" width="799" height="600" alt="Lista de alunos do box com última presença e total de aulas" loading="lazy">
+                    <h3>Alunos</h3>
+                    <p>Busca por nome ou e-mail, última presença, total de aulas e situação de cada aluno.</p>
+                </div>
+
+                <div class="desktop-feature">
+                    <img src="img/boxhop/financeiro.webp" width="799" height="600" alt="Financeiro do mês com recebido, taxas, devoluções e resultado" loading="lazy">
+                    <h3>Financeiro</h3>
+                    <p>Recebido no mês, taxas do Pix, devoluções, custos fixos e o resultado, com uma planilha
+                        pronta para exportar ao contador. Só o administrador do box vê esta tela.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sheet sheet--alt">
+        <div class="sheet__inner">
+            <p class="sheet__tag">FOLHA Nº 04 — ARQUITETURA</p>
+            <h2>Um sistema, vários boxes, Pix conferido no banco</h2>
+            <p class="sheet__text">
+                O backend é uma API em Django REST Framework com PostgreSQL, e o app do aluno e o painel do box são um
+                PWA em React. Cada box tem o próprio endereço, logo e cores, e toda consulta é filtrada pelo box da
+                requisição, para que os dados de um nunca apareçam para outro.
+            </p>
+            <p class="sheet__text">
+                O Pix usa a API do Mercado Pago, com a conta do próprio box: o dinheiro nunca passa pelo sistema. Quando
+                o banco avisa o pagamento, o backend não confia só no aviso: consulta o pagamento na API e confere o
+                valor antes de confirmar a vaga. A última vaga de uma aula é travada no banco no momento da reserva,
+                para duas pessoas não ficarem com o mesmo lugar, e as reservas não pagas expiram sozinhas. As
+                credenciais de pagamento ficam cifradas no banco.
+            </p>
+            <p class="sheet__text">
+                Roda numa VPS Linux com Docker, Nginx e HTTPS, com backup diário cifrado fora do servidor. As regras de
+                negócio são cobertas por mais de 400 testes automatizados.
+            </p>
+
+            <ul class="stacklist">
+                <li>Python / Django</li>
+                <li>Django REST Framework</li>
+                <li>PostgreSQL</li>
+                <li>React + Vite (PWA)</li>
+                <li>Pix (Mercado Pago, webhook)</li>
+                <li>Docker / Nginx</li>
+                <li>pytest</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="stamp">
+    <div class="stamp__inner">
+        <img src="img/logo-light.png" width="148" height="121" alt="Selo Mateus Simões da Rosa" class="stamp__logo">
+        <p>Desenvolvido por Mateus Simões da Rosa · Lages, SC · <span id="ano">2026</span></p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f7539add96ed4b80a56f3465349fbc16"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
